@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3f507ba6-822c-4fcf-8c39-426646fde06a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>UFC_fight_predictor.py</StartupFile>
+    <StartupFile>mySQLConnector.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="UFC_fight_predictor.py" />
+    <Compile Include="fighter.py" />
+    <Compile Include="mySQLConnector.py" />
+    <Compile Include="scraper.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
