@@ -11,6 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>UFC_fight_predictor</Name>
     <RootNamespace>UFC_fight_predictor</RootNamespace>
+    <InterpreterId>
+    </InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,8 +24,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="fighter.py" />
+    <Compile Include="main.py" />
     <Compile Include="mySQLConnector.py" />
     <Compile Include="scraper.py" />
+    <Compile Include="ufc_scraper\ufc_scraper\items.py" />
+    <Compile Include="ufc_scraper\ufc_scraper\middlewares.py" />
+    <Compile Include="ufc_scraper\ufc_scraper\pipelines.py" />
+    <Compile Include="ufc_scraper\ufc_scraper\settings.py" />
+    <Compile Include="ufc_scraper\ufc_scraper\spiders\fighter.py" />
+    <Compile Include="ufc_scraper\ufc_scraper\spiders\__init__.py" />
+    <Compile Include="ufc_scraper\ufc_scraper\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ufc_scraper\" />
+    <Folder Include="ufc_scraper\ufc_scraper\" />
+    <Folder Include="ufc_scraper\ufc_scraper\spiders\" />
+    <Folder Include="ufc_scraper\ufc_scraper\spiders\__pycache__\" />
+    <Folder Include="ufc_scraper\ufc_scraper\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ufc_scraper\scrapy.cfg" />
+    <Content Include="ufc_scraper\ufc_scraper\spiders\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="ufc_scraper\ufc_scraper\__pycache__\settings.cpython-310.pyc" />
+    <Content Include="ufc_scraper\ufc_scraper\__pycache__\__init__.cpython-310.pyc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
