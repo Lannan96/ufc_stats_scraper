@@ -23,7 +23,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="fighter.py" />
     <Compile Include="main.py" />
     <Compile Include="mySQLConnector.py" />
     <Compile Include="scraper.py" />

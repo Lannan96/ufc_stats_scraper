@@ -1,7 +1,7 @@
 
 import mysql.connector
 
-
+'''
 # write a function in the database object that either connects to the database or creates once if it doesn't exist
 
 db = mysql.connector.connect(
@@ -38,4 +38,3 @@ def retrieve_fighters():
 
 '''
 
-'''

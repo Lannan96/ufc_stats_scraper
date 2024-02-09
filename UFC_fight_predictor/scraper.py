@@ -5,12 +5,7 @@ import pandas as pd
 import re
 import scrapy
 
-url = "http://ufcstats.com/statistics/fighters?char="
-end_url = "&page=all"
-fighters = []
-data = requests.get(url).text
-# Create beautiful Soup object
-soup = BeautifulSoup(data, 'html.parser')
+
 
 
 def get_urls(target_url='http://ufcstats.com/statistics/fighters?char='):
@@ -82,26 +77,11 @@ class UFCScraper(scrapy.Spider):
 
 
 
-# scraper for fighter data
-height = response.xpath('/html/body/section/div/div/div[1]/ul/li[1]/text()').extract()[1].strip()
-weight = response.xpath('/html/body/section/div/div/div[1]/ul/li[2]/text()').extract()[1].strip()
-reach = response.xpath('/html/body/section/div/div/div[1]/ul/li[3]/text()').extract()[1].strip()
-stance = response.xpath('/html/body/section/div/div/div[1]/ul/li[4]/text()').extract()[1].strip()
-dob = response.xpath('/html/body/section/div/div/div[1]/ul/li[5]/text()').extract()[1].strip()
-
-slpm = response.xpath('/html/body/section/div/div/div[2]/div[1]/div[1]/ul/li[1]/text()').extract()[1].strip()
-str_acc = response.xpath('/html/body/section/div/div/div[2]/div[1]/div[1]/ul/li[2]/text()').extract()[1].strip()
-sapm = response.xpath('/html/body/section/div/div/div[2]/div[1]/div[1]/ul/li[3]/text()').extract()[1].strip()
-str_def = response.xpath('/html/body/section/div/div/div[2]/div[1]/div[1]/ul/li[4]/text()').extract()[1].strip()
-td_avg = response.xpath('/html/body/section/div/div/div[2]/div[1]/div[2]/ul/li[2]/text()').extract()[1].strip()
-td_acc = response.xpath('/html/body/section/div/div/div[2]/div[1]/div[2]/ul/li[3]/text()').extract()[1].strip()
-td_def = response.xpath('/html/body/section/div/div/div[2]/div[1]/div[2]/ul/li[4]/text()').extract()[1].strip()
-sub_avg = response.xpath('/html/body/section/div/div/div[2]/div[1]/div[2]/ul/li[5]/text()').extract()[1].strip()
 
 # scrape fight data
 
 # Mutate data to show fighters and their stat differential
-
+'''
 event = response.xpath('/html/body/section/div/div/div/div[2]/div/table/tbody/tr[2]/td[1]/i/a/@href').extract()
 
 
@@ -116,3 +96,4 @@ fighter_b = response.xpath('/html/body/section/div/div/div[1]/div[2]/div/h3/a/te
 # First fighter is always the winner for past events in the case of a D/NC it will be marked as such
 winner = response.xpath('/html/body/section/div/div/div[1]/div[1]/i/text()').extract_first().strip()
 method = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[1]/i[2]/text ()').extract().strip()
+'''
