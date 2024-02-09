@@ -32,27 +32,35 @@ class UfcScraperPipeline:
         # Format data before inserting into the database
         formatted_item = self.format_data(item)
         
-        # insert values into the table  
-        self.cursor.execute(
-            'INSERT INTO FIGHTER (fighter_id, name, height, weight, reach, stance, dob, SLpM, str_acc, SApM, str_def, TD_avg, TD_acc, TD_def, sub_avg) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
-                            (item['fighter_id'],
-                             item['name'],
-                             item['height'], 
-                             item['weight'], 
-                             item['reach'],
-                             item['stance'],
-                             item['dob'],
-                             item['SLpM'],
-                             item['str_acc'],
-                             item['SApM'],
-                             item['str_def'],
-                             item['TD_avg'],
-                             item['TD_acc'],
-                             item['TD_def'],
-                             item['sub_avg']))
+        # check if the fighter is already in the database
+        self.cursor.execute('SELECT * FROM Fighter WHERE fighter_id = %s', (formatted_item['fighter_id'],))
+        result = self.cursor.fetchone()
+        if result:
+            spider.logger.info(f'Fighter {formatted_item["name"]} already in the database')
+        else:
         
-        # commit the transaction
-        self.conn.commit()
+            # insert values into the table  
+            self.cursor.execute(
+                'INSERT INTO FIGHTER (fighter_id, name, height, weight, reach, stance, dob, SLpM, str_acc, SApM, str_def, TD_avg, TD_acc, TD_def, sub_avg) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
+                                (item['fighter_id'],
+                                 item['name'],
+                                 item['height'], 
+                                 item['weight'], 
+                                 item['reach'],
+                                 item['stance'],
+                                 item['dob'],
+                                 item['SLpM'],
+                                 item['str_acc'],
+                                 item['SApM'],
+                                 item['str_def'],
+                                 item['TD_avg'],
+                                 item['TD_acc'],
+                                 item['TD_def'],
+                                 item['sub_avg']))
+        
+            # commit the transaction
+            self.conn.commit()
+        return item
     
     def format_data(self, item):
         format = "%b %d, %Y"
@@ -78,21 +86,3 @@ class UfcScraperPipeline:
     def close_spider(self, spider):
         self.conn.close()
         self.cursor.close()
-    
-
-'''
-'SApM': '3.09',
-'SLpM': '2.85',
-'TD_acc': '36%',
-'TD_avg': '2.51',
-'TD_def': '65%',
-'dob': 'Jun 10, 1985',
-'height': '5\' 4"',
-'name': 'Test',
-'reach': '65"',
-'stance': 'Orthodox',
-'str_acc': '42%',
-'str_def': '52%',
-'sub_avg': '0.3',
-'weight': '125 lbs.'}
-'''
