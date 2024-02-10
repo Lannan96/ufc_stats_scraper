@@ -1,12 +1,36 @@
 import scrapy
-
+from ufc_scraper.items import ufc_fight_item
 
 class FightSpider(scrapy.Spider):
     name = "fight"
     allowed_domains = ["ufcstats.com"]
-    start_urls = ["http://ufcstats.com/fight-details/ce99b089400a4ad3"]
+    
+    
+    def start_requests(self):
+        start_urls = "http://ufcstats.com/statistics/events/completed?page=all"
+            
+        yield scrapy.Request(str(start_urls), callback=self.parse_event_page)
+    
+    def parse_event_page(self, response):
+        # Extract hrefs for each event on the current page
+        table = response.xpath('/html/body/section/div/div/div/div[2]/div/table/tbody/tr')
+        
+        for row in table[1:10]:
+            href = row.xpath('td[1]/i/a/@href').extract_first()
+            if href:
+                yield response.follow(str(href), callback=self.parse_fight_page)
+    
+    def parse_fight_page(self, response):
+        # Extract hrefs for each event on the current page
+        table = response.xpath('/html/body/section/div/div/table/tbody/tr')
 
-    def parse(self, response):
+        # response.xpath('/html/body/section/div/div/table/tbody/tr[1]/td[1]/p/a/@href').extract()
+        for row in table:
+            href = row.xpath('td[1]/p/a/@href').extract_first()
+            if href:
+                yield response.follow(href, callback=self.parse_fight_details)
+
+    def parse_fight_details(self, response):
         fight = ufc_fight_item()
         fight['fight_id'] = response.url.split('/')[-1]
         fight['fighter_a_id_FK'] = response.xpath('/html/body/section/div/div/div[1]/div[1]/div/h3/a/@href').extract_first().split('/')[-1]
@@ -18,12 +42,12 @@ class FightSpider(scrapy.Spider):
         fight['time'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[3]/text()').extract()[1].strip()
         fight['time_format'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[4]/text()').extract()[1].strip()
         fight['referee'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[5]/span/text()').extract_first().strip()
-        fight['judge1'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[2]/span/text()').extract()
-        fight['judge2'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[3]/span/text()').extract()
-        fight['judge3'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[4]/span/text()').extract()
-        fight['judge_1_score'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[2]/text()').extract()[1].strip()
-        fight['judge_2_score'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[3]/text()').extract()[1].strip()
-        fight['judge_3_score'] =  response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[4]/text()').extract()[1].strip()
+        fight['judge1'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[2]/span/text()').extract_first()
+        fight['judge2'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[3]/span/text()').extract_first()
+        fight['judge3'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[4]/span/text()').extract_first()
+        fight['judge_1_score'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[2]/text()').extract()
+        fight['judge_2_score'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[3]/text()').extract()
+        fight['judge_3_score'] =  response.xpath('/html/body/section/div/div/div[2]/div[2]/p[2]/i[4]/text()').extract()
         fight['fighter_a_knockdowns_total'] = response.xpath('/html/body/section/div/div/section[2]/table/tbody/tr/td[2]/p[1]/text()').extract_first().strip()
         fight['fighter_b_knockdowns_total'] = response.xpath('/html/body/section/div/div/section[2]/table/tbody/tr/td[2]/p[2]/text()').extract_first().strip()
         fight['fighter_a_sig_strikes_landed_total'] = response.xpath('/html/body/section/div/div/section[2]/table/tbody/tr/td[3]/p[1]/text()').extract_first().strip().split()[0]
@@ -71,7 +95,7 @@ class FightSpider(scrapy.Spider):
         yield fight
         
         
-    
+# /html/body/section/div/div/div/div[2]/div/table/tbody/tr[2]/td[1]/i/a  
 
 # fight_id = response.url.split('/')[-1]
 # fighter_a_id_FK = response.xpath('/html/body/section/div/div/div[1]/div[1]/div/h3/a/@href').extract_first().split('/')[-1]

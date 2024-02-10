@@ -26,7 +26,7 @@ for x in mycursor:
 # create fight table
 
 
-# function to insert values into a table
+# function to insert values into a table 
 def insert_fighters(fighters_list):
     for fighter in fighters_list:
         mycursor.execute('INSERT INTO FIGHTER (name, age) VALUES (%s, %s)', (fighter[0], fighter[1]))

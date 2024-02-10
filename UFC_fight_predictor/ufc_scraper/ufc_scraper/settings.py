@@ -63,7 +63,8 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    "ufc_scraper.pipelines.UfcScraperPipeline": 300,
+    #"ufc_scraper.pipelines.UfcScraperPipeline": 300,
+    "ufc_scraper.pipelines.ufc_fight_scraper_pipeline": 100,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
