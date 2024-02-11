@@ -10,7 +10,6 @@ class FighterSpider(scrapy.Spider):
         start_url = "http://ufcstats.com/statistics/fighters?char="
         end_url = "&page=all"
         urls = [start_url + char + end_url for char in ascii_lowercase]
-        urls = urls[:1]
 
         # for each url add in a second loop to get all the fighters hrefs
             
