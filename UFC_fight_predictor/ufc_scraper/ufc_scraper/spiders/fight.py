@@ -15,7 +15,7 @@ class FightSpider(scrapy.Spider):
         # Extract hrefs for each event on the current page
         table = response.xpath('/html/body/section/div/div/div/div[2]/div/table/tbody/tr')
         
-        for row in table[1:10]:
+        for row in table[1:]:
             href = row.xpath('td[1]/i/a/@href').extract_first()
             if href:
                 yield response.follow(str(href), callback=self.parse_fight_page)
@@ -36,7 +36,7 @@ class FightSpider(scrapy.Spider):
         fight['fighter_a_id_FK'] = response.xpath('/html/body/section/div/div/div[1]/div[1]/div/h3/a/@href').extract_first().split('/')[-1]
         fight['fighter_b_id_FK'] = response.xpath('/html/body/section/div/div/div[1]/div[2]/div/h3/a/@href').extract_first().split('/')[-1]
         fight['event_id_FK'] = response.xpath('/html/body/section/div/h2/a/@href').extract_first().split('/')[-1]
-        fight['weight_class'] = response.xpath('/html/body/section/div/div/div[2]/div[1]/i/text()').extract_first().strip()
+        fight['weight_class'] = response.xpath('/html/body/section/div/div/div[2]/div[1]/i/text()').extract()
         fight['method'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[1]/i[2]/text()').extract_first().strip()
         fight['round'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[2]/text()').extract()[1].strip()
         fight['time'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[3]/text()').extract()[1].strip()
@@ -95,7 +95,7 @@ class FightSpider(scrapy.Spider):
         yield fight
         
         
-# /html/body/section/div/div/div/div[2]/div/table/tbody/tr[2]/td[1]/i/a  
+# /html/body/section/div/div/div[2]/div[1]/i
 
 # fight_id = response.url.split('/')[-1]
 # fighter_a_id_FK = response.xpath('/html/body/section/div/div/div[1]/div[1]/div/h3/a/@href').extract_first().split('/')[-1]
