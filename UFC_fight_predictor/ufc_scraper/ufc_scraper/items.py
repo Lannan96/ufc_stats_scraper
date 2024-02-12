@@ -88,6 +88,12 @@ class ufc_fight_item(scrapy.Item):
     fighter_a_sig_ground_attempted_total = Field()
     fighter_b_sig_ground_attempted_total = Field()
     
+class ufc_event_item(scrapy.Item):
+        event_id = Field()
+        event_name = Field()
+        date = Field()
+        location = Field()
+    
 
 
 
