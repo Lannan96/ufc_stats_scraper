@@ -30,6 +30,7 @@
     <Compile Include="ufc_scraper\ufc_scraper\middlewares.py" />
     <Compile Include="ufc_scraper\ufc_scraper\pipelines.py" />
     <Compile Include="ufc_scraper\ufc_scraper\settings.py" />
+    <Compile Include="ufc_scraper\ufc_scraper\spiders\event.py" />
     <Compile Include="ufc_scraper\ufc_scraper\spiders\fight.py" />
     <Compile Include="ufc_scraper\ufc_scraper\spiders\fighter.py" />
     <Compile Include="ufc_scraper\ufc_scraper\spiders\__init__.py" />
