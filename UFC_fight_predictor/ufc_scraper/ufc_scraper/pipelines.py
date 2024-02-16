@@ -248,7 +248,7 @@ class ufc_fight_scraper_pipeline:
         self.conn.close()
         self.cursor.close()
 
-class UfcScraperPipeline:
+class ufc_event_scraper_pipeline:
 
     def __init__(self):
         self.conn = mysql.connector.connect(
@@ -262,64 +262,42 @@ class UfcScraperPipeline:
         
         # create table if none exists
         self.cursor.execute(
-            'CREATE TABLE IF NOT EXISTS event (event_id VARCHAR(255) PRIMARY KEY, name VARCHAR(255), height INT, weight INT, reach INT,stance VARCHAR(255), dob DATE, SLpM FLOAT, str_acc FLOAT, SApM FLOAT, str_def FLOAT, TD_avg FLOAT, TD_acc FLOAT, TD_def FLOAT, sub_avg FLOAT)')
-    
+            'CREATE TABLE IF NOT EXISTS event (event_id VARCHAR(255) PRIMARY KEY, name VARCHAR(255), date DATE, location VARCHAR(255))')
+
 
     def process_item(self, item, spider):
         
         # Format data before inserting into the database
-        formatted_item = self.format_fighter_data(item)
+        formatted_item = self.format_event_data(item)
         
         # check if the fighter is already in the database
-        self.cursor.execute('SELECT * FROM Fighter WHERE fighter_id = %s', (formatted_item['fighter_id'],))
+        self.cursor.execute('SELECT * FROM event WHERE event_id = %s', (formatted_item['event_id'],))
         result = self.cursor.fetchone()
         if result:
-            spider.logger.info(f'Fighter {formatted_item["name"]} already in the database')
+            spider.logger.info(f'Event {formatted_item["event_name"]} already in the database')
         else:
         
             # insert values into the table  
             self.cursor.execute(
-                'INSERT INTO FIGHTER (fighter_id, name, height, weight, reach, stance, dob, SLpM, str_acc, SApM, str_def, TD_avg, TD_acc, TD_def, sub_avg) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
-                                (item['fighter_id'],
-                                 item['name'],
-                                 item['height'], 
-                                 item['weight'], 
-                                 item['reach'],
-                                 item['stance'],
-                                 item['dob'],
-                                 item['SLpM'],
-                                 item['str_acc'],
-                                 item['SApM'],
-                                 item['str_def'],
-                                 item['TD_avg'],
-                                 item['TD_acc'],
-                                 item['TD_def'],
-                                 item['sub_avg']))
+                'INSERT INTO event (event_id, name, date, location) VALUES (%s, %s, %s, %s)',
+                                (formatted_item['event_id'],
+                                 formatted_item['event_name'],
+                                 formatted_item['date'], 
+                                 formatted_item['location']))
         
             # commit the transaction
             self.conn.commit()
         return item
     
-    def format_fighter_data(self, item):
-        format = "%b %d, %Y"
+    def format_event_data(self, item):
+        format = "%B %d, %Y"
         # Format the data before inserting into the database
-        item['fighter_id'] = item['fighter_id']
-        item['name'] = item['name'].strip() if item['name'] and item['name'] != '--' else None
-        item['height'] = int(item['height'].replace('\'', '').replace('"', '').split()[0]) * 12 + int(item['height'].replace('\'', '').replace('"', '').split()[1]) if item['height'] and item['height'] != '--' else None
-        item['weight'] = int(item['weight'].replace(' lbs.', '')) if item['weight'] and item['weight'] != '--' else None
-        item['reach'] = int(item['reach'].replace('"', '')) if item['reach'] and item['reach'] != '--' else None
-        item['stance'] = item['stance'].strip() if item['stance'] and item['stance'] != '--' else None
-        item['dob'] = datetime.strptime(item['dob'], format) if item['dob'] and item['dob'] != '--' else None
-        item['SLpM'] = float(item['SLpM']) if item['SLpM'] and item['SLpM'] != '--' else None
-        item['str_acc'] = float(item['str_acc'].replace('%', '')) if item['str_acc'] and item['str_acc'] != '--' else None
-        item['SApM'] = float(item['SApM']) if item['SApM'] and item['SApM'] != '--' else None
-        item['str_def'] = float(item['str_def'].replace('%', '')) if item['str_def'] and item['str_def'] != '--' else None
-        item['TD_avg'] = float(item['TD_avg']) if item['TD_avg'] and item['TD_avg'] != '--' else None
-        item['TD_acc'] = float(item['TD_acc'].replace('%', '')) if item['TD_acc'] and item['TD_acc'] != '--' else None
-        item['TD_def'] = float(item['TD_def'].replace('%', '')) if item['TD_def'] and item['TD_def'] != '--' else None
-        item['sub_avg'] = float(item['sub_avg']) if item['sub_avg'] and item['sub_avg'] != '--' else None
+        item['event_id'] = item['event_id'][0].split('/')[-1] if item['event_id'] and item['event_id'][0] != '--' else None
+        item['event_name'] = item['event_name'][0].strip() if item['event_name'] and item['event_name'][0] != '--' else None
+        item['date'] = datetime.strptime(item['date'][0].strip(), format) if item['date'] and item['date'][0] != '--' else None
+        item['location'] = item['location'][0].strip() if item['location'] and item['location'][0] != '--' else None
         return item
-   
+
     
     def close_spider(self, spider):
         self.conn.close()

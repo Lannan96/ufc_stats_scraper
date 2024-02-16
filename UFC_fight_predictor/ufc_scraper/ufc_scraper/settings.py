@@ -64,7 +64,8 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     #"ufc_scraper.pipelines.UfcScraperPipeline": 300,
-    "ufc_scraper.pipelines.ufc_fight_scraper_pipeline": 100,
+    #"ufc_scraper.pipelines.ufc_fight_scraper_pipeline": 100,
+    "ufc_scraper.pipelines.ufc_event_scraper_pipeline": 200,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -92,4 +93,4 @@ ITEM_PIPELINES = {
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
-LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'DEBUG'
