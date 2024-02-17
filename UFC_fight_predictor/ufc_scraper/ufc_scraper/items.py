@@ -7,7 +7,7 @@ import scrapy
 from scrapy.item import Item, Field
 
 
-class UfcScraperItem(scrapy.Item):
+class ufc_fighter_scraper_item(scrapy.Item):
     # define the fields for your item here like:
     fighter_id = Field()
     name = Field()
@@ -31,6 +31,8 @@ class ufc_fight_item(scrapy.Item):
     fighter_a_id_FK = Field()
     fighter_b_id_FK = Field()
     event_id_FK = Field()
+    winner = Field()
+    performance_bonus = Field()
     weight_class = Field()
     method = Field()
     round = Field()
