@@ -1,6 +1,6 @@
 import scrapy
 from string import ascii_lowercase
-from ufc_scraper.items import UfcScraperItem
+from ufc_scraper.items import ufc_fighter_scraper_item
 
 
 class FighterSpider(scrapy.Spider):
@@ -27,7 +27,7 @@ class FighterSpider(scrapy.Spider):
         
         
     def parse_fighter_details(self, response):
-        fight = UfcScraperItem()
+        fight = ufc_fighter_scraper_item()
         fight['fighter_id'] = response.url.split('/')[-1]
         fight['name'] = response.xpath('/html/body/section/div/h2/span[1]/text()').extract_first().strip()
         fight['height'] = response.xpath('/html/body/section/div/div/div[1]/ul/li[1]/text()').extract()[1].strip()

@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 import scrapy
 from ufc_scraper.items import ufc_fight_item
 
@@ -24,7 +25,6 @@ class FightSpider(scrapy.Spider):
         # Extract hrefs for each event on the current page
         table = response.xpath('/html/body/section/div/div/table/tbody/tr')
 
-        # response.xpath('/html/body/section/div/div/table/tbody/tr[1]/td[1]/p/a/@href').extract()
         for row in table:
             href = row.xpath('td[1]/p/a/@href').extract_first()
             if href:
@@ -36,6 +36,8 @@ class FightSpider(scrapy.Spider):
         fight['fighter_a_id_FK'] = response.xpath('/html/body/section/div/div/div[1]/div[1]/div/h3/a/@href').extract_first().split('/')[-1]
         fight['fighter_b_id_FK'] = response.xpath('/html/body/section/div/div/div[1]/div[2]/div/h3/a/@href').extract_first().split('/')[-1]
         fight['event_id_FK'] = response.xpath('/html/body/section/div/h2/a/@href').extract_first().split('/')[-1]
+        fight['winner'] = response.xpath('/html/body/section/div/div/div[1]/div[1]/i/text()').extract()
+        fight['performance_bonus'] = response.xpath('/html/body/section/div/div/div[2]/div[1]/i/img/@src').extract()
         fight['weight_class'] = response.xpath('/html/body/section/div/div/div[2]/div[1]/i/text()').extract()
         fight['method'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[1]/i[2]/text()').extract_first().strip()
         fight['round'] = response.xpath('/html/body/section/div/div/div[2]/div[2]/p[1]/i[2]/text()').extract()[1].strip()
