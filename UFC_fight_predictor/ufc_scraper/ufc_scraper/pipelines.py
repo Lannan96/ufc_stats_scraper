@@ -177,63 +177,63 @@ class ufc_fight_scraper_pipeline:
         item['winner'] = self.format_fight_winner(item['winner'])
         item['performance_bonus'] = self.format_fight_performance_bonus(item['performance_bonus'])
         item['weight_class'] = self.format_fight_weight_class(item['weight_class'])
-        item['method'] = item['method']
-        item['round'] = item['round']
-        item['time'] = item['time']
-        item['time_format'] = item['time_format']
-        item['referee'] = item['referee']
-        item['judge1'] = item['judge1'].strip() if item['judge1'] and item['judge1'] != '--' else None
-        item['judge2'] = item['judge2'].strip() if item['judge2'] and item['judge2'] != '--' else None
-        item['judge3'] = item['judge3'].strip() if item['judge3'] and item['judge3'] != '--' else None
-        item['judge_1_score'] = item['judge_1_score'][1] if item['judge_1_score'] and item['judge_1_score'] != '--' else None
-        item['judge_2_score'] = item['judge_2_score'][1] if item['judge_2_score'] and item['judge_2_score'] != '--' else None
-        item['judge_3_score'] = item['judge_3_score'][1] if item['judge_3_score'] and item['judge_3_score'] != '--' else None
-        item['fighter_a_knockdowns_total'] = int(item['fighter_a_knockdowns_total']) if item['fighter_a_knockdowns_total'] and item['fighter_a_knockdowns_total'] != '--' else None
-        item['fighter_b_knockdowns_total'] = int(item['fighter_b_knockdowns_total']) if item['fighter_b_knockdowns_total'] and item['fighter_b_knockdowns_total'] != '--' else None
-        item['fighter_a_sig_strikes_landed_total'] = int(item['fighter_a_sig_strikes_landed_total']) if item['fighter_a_sig_strikes_landed_total'] and item['fighter_a_sig_strikes_landed_total'] != '--' else None
-        item['fighter_b_sig_strikes_landed_total'] = int(item['fighter_b_sig_strikes_landed_total']) if item['fighter_b_sig_strikes_landed_total'] and item['fighter_b_sig_strikes_landed_total'] != '--' else None
-        item['fighter_a_sig_strikes_attempted_total'] = int(item['fighter_a_sig_strikes_attempted_total']) if item['fighter_a_sig_strikes_attempted_total'] and item['fighter_a_sig_strikes_attempted_total'] != '--' else None
-        item['fighter_b_sig_strikes_attempted_total'] = int(item['fighter_b_sig_strikes_attempted_total']) if item['fighter_b_sig_strikes_attempted_total'] and item['fighter_b_sig_strikes_attempted_total'] != '--' else None
-        item['fighter_a_total_strikes_landed_total'] = int(item['fighter_a_total_strikes_landed_total']) if item['fighter_a_total_strikes_landed_total'] and item['fighter_a_total_strikes_landed_total'] != '--' else None
-        item['fighter_b_total_strikes_landed_total'] = int(item['fighter_b_total_strikes_landed_total']) if item['fighter_b_total_strikes_landed_total'] and item['fighter_b_total_strikes_landed_total'] != '--' else None
-        item['fighter_a_total_strikes_attempted_total'] = int(item['fighter_a_total_strikes_attempted_total']) if item['fighter_a_total_strikes_attempted_total'] and item['fighter_a_total_strikes_attempted_total'] != '--' else None
-        item['fighter_b_total_strikes_attempted_total'] = int(item['fighter_b_total_strikes_attempted_total']) if item['fighter_b_total_strikes_attempted_total'] and item['fighter_b_total_strikes_attempted_total'] != '--' else None
-        item['fighter_a_takedowns_total_landed'] = int(item['fighter_a_takedowns_total_landed']) if item['fighter_a_takedowns_total_landed'] and item['fighter_a_takedowns_total_landed'] != '--' else None
-        item['fighter_b_takedowns_total_landed'] = int(item['fighter_b_takedowns_total_landed']) if item['fighter_b_takedowns_total_landed'] and item['fighter_b_takedowns_total_landed'] != '--' else None
-        item['fighter_a_takedowns_attempted_total'] = int(item['fighter_a_takedowns_attempted_total']) if item['fighter_a_takedowns_attempted_total'] and item['fighter_a_takedowns_attempted_total'] != '--' else None
-        item['fighter_b_takedowns_attempted_total'] = int(item['fighter_b_takedowns_attempted_total']) if item['fighter_b_takedowns_attempted_total'] and item['fighter_b_takedowns_attempted_total'] != '--' else None
-        item['fighter_a_submissions_total'] = int(item['fighter_a_submissions_total']) if item['fighter_a_submissions_total'] and item['fighter_a_submissions_total'] != '--' else None
-        item['fighter_b_submissions_total'] = int(item['fighter_b_submissions_total']) if item['fighter_b_submissions_total'] and item['fighter_b_submissions_total'] != '--' else None
-        item['fighter_a_reversals_total'] = int(item['fighter_a_reversals_total']) if item['fighter_a_reversals_total'] and item['fighter_a_reversals_total'] != '--' else None
-        item['fighter_b_reversals_total'] = int(item['fighter_b_reversals_total']) if item['fighter_b_reversals_total'] and item['fighter_b_reversals_total'] != '--' else None
-        item['fighter_a_control_total'] = item['fighter_a_control_total'] if item['fighter_a_control_total'] and item['fighter_a_control_total'] != '--' else None
-        item['fighter_b_control_total'] = item['fighter_b_control_total'] if item['fighter_b_control_total'] and item['fighter_b_control_total'] != '--' else None
-        item['fighter_a_sig_head_landed_total'] = int(item['fighter_a_sig_head_landed_total']) if item['fighter_a_sig_head_landed_total'] and item['fighter_a_sig_head_landed_total'] != '--' else None
-        item['fighter_b_sig_head_landed_total'] = int(item['fighter_b_sig_head_landed_total']) if item['fighter_b_sig_head_landed_total'] and item['fighter_b_sig_head_landed_total'] != '--' else None
-        item['fighter_a_sig_head_attempted_total'] = int(item['fighter_a_sig_head_attempted_total']) if item['fighter_a_sig_head_attempted_total'] and item['fighter_a_sig_head_attempted_total'] != '--' else None
-        item['fighter_b_sig_head_attempted_total'] = int(item['fighter_b_sig_head_attempted_total']) if item['fighter_b_sig_head_attempted_total'] and item['fighter_b_sig_head_attempted_total'] != '--' else None
-        item['fighter_a_sig_body_landed_total'] = int(item['fighter_a_sig_body_landed_total']) if item['fighter_a_sig_body_landed_total'] and item['fighter_a_sig_body_landed_total'] != '--' else None
-        item['fighter_b_sig_body_landed_total'] = int(item['fighter_b_sig_body_landed_total']) if item['fighter_b_sig_body_landed_total'] and item['fighter_b_sig_body_landed_total'] != '--' else None
-        item['fighter_a_sig_body_attempted_total'] = int(item['fighter_a_sig_body_attempted_total']) if item['fighter_a_sig_body_attempted_total'] and item['fighter_a_sig_body_attempted_total'] != '--' else None
-        item['fighter_b_sig_body_attempted_total'] = int(item['fighter_b_sig_body_attempted_total']) if item['fighter_b_sig_body_attempted_total'] and item['fighter_b_sig_body_attempted_total'] != '--' else None
-        item['fighter_a_sig_leg_landed_total'] = int(item['fighter_a_sig_leg_landed_total']) if item['fighter_a_sig_leg_landed_total'] and item['fighter_a_sig_leg_landed_total'] != '--' else None
-        item['fighter_b_sig_leg_landed_total'] = int(item['fighter_b_sig_leg_landed_total']) if item['fighter_b_sig_leg_landed_total'] and item['fighter_b_sig_leg_landed_total'] != '--' else None
-        item['fighter_a_sig_leg_attempted_total'] = int(item['fighter_a_sig_leg_attempted_total']) if item['fighter_a_sig_leg_attempted_total'] and item['fighter_a_sig_leg_attempted_total'] != '--' else None
-        item['fighter_b_sig_leg_attempted_total'] = int(item['fighter_b_sig_leg_attempted_total']) if item['fighter_b_sig_leg_attempted_total'] and item['fighter_b_sig_leg_attempted_total'] != '--' else None
-        item['fighter_a_sig_distance_landed_total'] = int(item['fighter_a_sig_distance_landed_total']) if item['fighter_a_sig_distance_landed_total'] and item['fighter_a_sig_distance_landed_total'] != '--' else None
-        item['fighter_b_sig_distance_landed_total'] = int(item['fighter_b_sig_distance_landed_total']) if item['fighter_b_sig_distance_landed_total'] and item['fighter_b_sig_distance_landed_total'] != '--' else None
-        item['fighter_a_sig_distance_attempted_total'] = int(item['fighter_a_sig_distance_attempted_total']) if item['fighter_a_sig_distance_attempted_total'] and item['fighter_a_sig_distance_attempted_total'] != '--' else None
-        item['fighter_b_sig_distance_attempted_total'] = int(item['fighter_b_sig_distance_attempted_total']) if item['fighter_b_sig_distance_attempted_total'] and item['fighter_b_sig_distance_attempted_total'] != '--' else None
-        item['fighter_a_sig_clinch_landed_total'] = int(item['fighter_a_sig_clinch_landed_total']) if item['fighter_a_sig_clinch_landed_total'] and item['fighter_a_sig_clinch_landed_total'] != '--' else None
-        item['fighter_b_sig_clinch_landed_total'] = int(item['fighter_b_sig_clinch_landed_total']) if item['fighter_b_sig_clinch_landed_total'] and item['fighter_b_sig_clinch_landed_total'] != '--' else None
-        item['fighter_a_sig_clinch_attempted_total'] = int(item['fighter_a_sig_clinch_attempted_total']) if item['fighter_a_sig_clinch_attempted_total'] and item['fighter_a_sig_clinch_attempted_total'] != '--' else None
-        item['fighter_b_sig_clinch_attempted_total'] = int(item['fighter_b_sig_clinch_attempted_total']) if item['fighter_b_sig_clinch_attempted_total'] and item['fighter_b_sig_clinch_attempted_total'] != '--' else None
-        item['fighter_a_sig_ground_landed_total'] = int(item['fighter_a_sig_ground_landed_total']) if item['fighter_a_sig_ground_landed_total'] and item['fighter_a_sig_ground_landed_total'] != '--' else None
-        item['fighter_b_sig_ground_landed_total'] = int(item['fighter_b_sig_ground_landed_total']) if item['fighter_b_sig_ground_landed_total'] and item['fighter_b_sig_ground_landed_total'] != '--' else None
-        item['fighter_a_sig_ground_attempted_total'] = int(item['fighter_a_sig_ground_attempted_total']) if item['fighter_a_sig_ground_attempted_total'] and item['fighter_a_sig_ground_attempted_total'] != '--' else None
-        item['fighter_b_sig_ground_attempted_total'] = int(item['fighter_b_sig_ground_attempted_total']) if item['fighter_b_sig_ground_attempted_total'] and item['fighter_b_sig_ground_attempted_total'] != '--' else None
+        item['method'] = self.format_fight_method(item['method'])
+        item['round'] = self.format_fight_round(item['round'])
+        item['time'] = self.format_fight_time(item['time'])
+        item['time_format'] = self.format_fight_time_format(item['time_format'])
+        item['referee'] = self.format_fight_referee(item['referee'])
+        item['judge1'] = self.format_fight_judge(item['judge1'])
+        item['judge2'] = self.format_fight_judge(item['judge2'])
+        item['judge3'] = self.format_fight_judge(item['judge3'])
+        item['judge_1_score'] = self.format_fight_judge_score(item['judge_1_score'])
+        item['judge_2_score'] = self.format_fight_judge_score(item['judge_2_score'])
+        item['judge_3_score'] = self.format_fight_judge_score(item['judge_3_score'])
+        item['fighter_a_knockdowns_total'] = self.format_fight_fighter_knockdowns_total(item['fighter_a_knockdowns_total'])
+        item['fighter_b_knockdowns_total'] = self.format_fight_fighter_knockdowns_total(item['fighter_b_knockdowns_total'])
+        item['fighter_a_sig_strikes_landed_total'] = self.format_fight_strikes_landed(item['fighter_a_sig_strikes_landed_total'])
+        item['fighter_b_sig_strikes_landed_total'] = self.format_fight_strikes_landed(item['fighter_b_sig_strikes_landed_total'])
+        item['fighter_a_sig_strikes_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_sig_strikes_attempted_total'])
+        item['fighter_b_sig_strikes_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_sig_strikes_attempted_total'])
+        item['fighter_a_total_strikes_landed_total'] = self.format_fight_strikes_landed(item['fighter_a_total_strikes_landed_total'])
+        item['fighter_b_total_strikes_landed_total'] = self.format_fight_strikes_landed(item['fighter_b_total_strikes_landed_total'])
+        item['fighter_a_total_strikes_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_total_strikes_attempted_total'])
+        item['fighter_b_total_strikes_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_total_strikes_attempted_total'])
+        item['fighter_a_takedowns_total_landed'] = self.format_fight_strikes_landed(item['fighter_a_takedowns_total_landed'])
+        item['fighter_b_takedowns_total_landed'] = self.format_fight_strikes_landed(item['fighter_b_takedowns_total_landed'])
+        item['fighter_a_takedowns_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_takedowns_attempted_total'])
+        item['fighter_b_takedowns_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_takedowns_attempted_total'])
+        item['fighter_a_submissions_total'] = self.format_fight_submission(item['fighter_a_submissions_total'])
+        item['fighter_b_submissions_total'] = self.format_fight_submission(item['fighter_b_submissions_total'])
+        item['fighter_a_reversals_total'] = self.format_fight_reversal(item['fighter_a_reversals_total'])
+        item['fighter_b_reversals_total'] = self.format_fight_reversal(item['fighter_b_reversals_total'])
+        item['fighter_a_control_total'] = self.format_fight_control(item['fighter_a_control_total'])
+        item['fighter_b_control_total'] = self.format_fight_control(item['fighter_b_control_total'])
+        item['fighter_a_sig_head_landed_total'] = self.format_fight_strikes_landed(item['fighter_a_sig_head_landed_total'])
+        item['fighter_b_sig_head_landed_total'] = self.format_fight_strikes_landed(item['fighter_b_sig_head_landed_total'])
+        item['fighter_a_sig_head_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_sig_head_attempted_total'])
+        item['fighter_b_sig_head_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_sig_head_attempted_total'])
+        item['fighter_a_sig_body_landed_total'] = self.format_fight_strikes_landed(item['fighter_a_sig_body_landed_total'])
+        item['fighter_b_sig_body_landed_total'] = self.format_fight_strikes_landed(item['fighter_b_sig_body_landed_total'])
+        item['fighter_a_sig_body_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_sig_body_attempted_total'])
+        item['fighter_b_sig_body_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_sig_body_attempted_total'])
+        item['fighter_a_sig_leg_landed_total'] = self.format_fight_strikes_landed(item['fighter_a_sig_leg_landed_total'])
+        item['fighter_b_sig_leg_landed_total'] = self.format_fight_strikes_landed(item['fighter_b_sig_leg_landed_total'])
+        item['fighter_a_sig_leg_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_sig_leg_attempted_total'])
+        item['fighter_b_sig_leg_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_sig_leg_attempted_total'])
+        item['fighter_a_sig_distance_landed_total'] = self.format_fight_strikes_landed(item['fighter_a_sig_distance_landed_total'])
+        item['fighter_b_sig_distance_landed_total'] = self.format_fight_strikes_landed(item['fighter_b_sig_distance_landed_total'])
+        item['fighter_a_sig_distance_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_sig_distance_attempted_total'])
+        item['fighter_b_sig_distance_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_sig_distance_attempted_total'])
+        item['fighter_a_sig_clinch_landed_total'] = self.format_fight_strikes_landed(item['fighter_a_sig_clinch_landed_total'])
+        item['fighter_b_sig_clinch_landed_total'] = self.format_fight_strikes_landed(item['fighter_b_sig_clinch_landed_total'])
+        item['fighter_a_sig_clinch_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_sig_clinch_attempted_total'])
+        item['fighter_b_sig_clinch_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_sig_clinch_attempted_total'])
+        item['fighter_a_sig_ground_landed_total'] = self.format_fight_strikes_landed(item['fighter_a_sig_ground_landed_total'])
+        item['fighter_b_sig_ground_landed_total'] = self.format_fight_strikes_landed(item['fighter_b_sig_ground_landed_total'])
+        item['fighter_a_sig_ground_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_a_sig_ground_attempted_total'])
+        item['fighter_b_sig_ground_attempted_total'] = self.format_fight_strikes_attempted(item['fighter_b_sig_ground_attempted_total'])
         return item
-    
+     
     def format_fight_weight_class(self, value):
         if len(value) == 1:
             value = value[0].strip() 
@@ -246,18 +246,20 @@ class ufc_fight_scraper_pipeline:
             return value
     
     def format_fight_winner(self, value):
-       winner = value[0].strip()
-       if winner == 'W':
-           return 'Fighter A'
-       elif winner == 'D':
-           return 'Draw'
-       elif winner == 'NC':
-           return 'No Contest'
-       else: return 'Fighter B'
+       if value != None:
+           winner = value[0].strip()
+           if winner == 'W':
+               return 'Fighter A'
+           elif winner == 'D':
+               return 'Draw'
+           elif winner == 'NC':
+               return 'No Contest'
+           else: return 'Fighter B'
+       else: return None
             
     def format_fight_performance_bonus(self, value):
         
-        if len(value) != 0:
+        if value != None:
             bonus_type = value[0].split('/')[-1]
             if bonus_type == 'fight.png':
                 return 'Fight of the Night'
@@ -270,6 +272,71 @@ class ufc_fight_scraper_pipeline:
             else: return None
         else:
             return None
+    
+    def format_fight_fighter_knockdowns_total(self, value):
+        if value != None and value.strip() != '--':
+            return int(value.strip())
+        else: return None
+        
+    def format_fight_method(self, value):
+        if value != None and value.strip() != '--':
+            return value.strip()
+        else: return None
+    
+    def format_fight_round(self, value):
+        if value != None:
+            return int(value[1].strip())
+        else: return None
+        
+    def format_fight_time(self, value):
+        if value != None:
+            return value[1].strip()
+        else: return None
+        
+    def format_fight_time_format(self, value):
+        if value != None:
+            return value[1].strip()
+        else: return None
+        
+    def format_fight_referee(self, value):
+        if value != None and value.strip() != '--':
+            return value.strip()
+        else: return None
+    
+    def format_fight_judge(self, value):
+        if value != None and value.strip() != '--':
+            return value.strip()
+        else: return None
+        
+    def format_fight_judge_score(self, value):
+        if value != None and value.strip() != '--':
+            return value.strip()
+        else: return None
+        
+    def format_fight_strikes_landed(self, value):
+        if value != None and value.strip() != '--':
+            return int(value.strip().split()[0])
+        else: return None
+        
+    def format_fight_strikes_attempted(self, value):
+        if value != None and value.strip() != '--':
+            return int(value.strip().split()[2])
+        else: return None
+        
+    def format_fight_submission(self, value):
+        if value != None and value.strip() != '--':
+            return int(value.strip())
+        else: return None
+    
+    def format_fight_reversal(self, value):
+        if value != None and value.strip() != '--':
+            return int(value.strip())
+        else: return None
+
+    def format_fight_control(self, value):
+        if value != None and value.strip() != '--':
+            return value.strip()
+        else: return None
         
 
     def close_spider(self, spider):
