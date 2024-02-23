@@ -247,7 +247,7 @@ class ufc_fight_scraper_pipeline:
     
     def format_fight_winner(self, value):
        if value != None:
-           winner = value[0].strip()
+           winner = value.strip()
            if winner == 'W':
                return 'Fighter A'
            elif winner == 'D':
