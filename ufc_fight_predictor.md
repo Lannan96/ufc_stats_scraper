@@ -152,23 +152,18 @@ the database after working with them
 ```
 
 
+
+
+    ' Now we have explained what data we have and what each column represents we now want to know what are \nthe typical values, what is the distribution and perform some cleaning.\n\nPart of this would be selecting only data that is useful, however, I am going to perform the data \ncleaning steps on all my data as I wrote the scrapers and may want to change how things are formatted in \nthe database after working with them\n'
+
+
+
+
 ```python
 #!pip install mysql-connector-python
 #!pip uninstall mqsql-connector
 
 ```
-
-    Requirement already satisfied: mysql-connector-python in c:\users\lanna\anaconda3\lib\site-packages (8.0.33)
-    Requirement already satisfied: protobuf<=3.20.3,>=3.11.0 in c:\users\lanna\anaconda3\lib\site-packages (from mysql-connector-python) (3.19.6)
-    
-
-    WARNING: Ignoring invalid distribution -rotobuf (c:\users\lanna\anaconda3\lib\site-packages)
-    WARNING: Ignoring invalid distribution -rotobuf (c:\users\lanna\anaconda3\lib\site-packages)
-    WARNING: Ignoring invalid distribution -rotobuf (c:\users\lanna\anaconda3\lib\site-packages)
-    WARNING: Ignoring invalid distribution -rotobuf (c:\users\lanna\anaconda3\lib\site-packages)
-    WARNING: Ignoring invalid distribution -rotobuf (c:\users\lanna\anaconda3\lib\site-packages)
-    WARNING: Ignoring invalid distribution -rotobuf (c:\users\lanna\anaconda3\lib\site-packages)
-    
 
 ## Gather our data
 Now that we understand our database structure and the data available to us we need to write a query to get the correct data from out database.
@@ -326,187 +321,187 @@ dataframe
   <tbody>
     <tr>
       <th>0</th>
-      <td>0005e00b07cee542</td>
-      <td>634e2fb70bde3fd5</td>
-      <td>805ad1801eb26abb</td>
-      <td>Fighter A</td>
-      <td>UFC Fight Night: Holm vs. Aldana</td>
-      <td>2020-10-03</td>
-      <td>Holly Holm</td>
-      <td>Irene Aldana</td>
-      <td>68.0</td>
-      <td>69.0</td>
-      <td>135.0</td>
-      <td>135.0</td>
-      <td>69.0</td>
-      <td>68.0</td>
-      <td>Southpaw</td>
+      <td>1a191251620a84ca</td>
+      <td>77d7295d1b22c694</td>
+      <td>00a905a4a4a2b071</td>
+      <td>Fighter B</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>Alessio Di Chirico</td>
+      <td>Roman Kopylov</td>
+      <td>72.0</td>
+      <td>72.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>74.0</td>
+      <td>75.0</td>
       <td>Orthodox</td>
-      <td>1981-10-17</td>
-      <td>1988-03-26</td>
-      <td>3.21</td>
-      <td>5.24</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>2.79</td>
-      <td>6.33</td>
-      <td>56.0</td>
-      <td>57.0</td>
-      <td>0.90</td>
-      <td>0.16</td>
-      <td>30.0</td>
+      <td>Southpaw</td>
+      <td>1989-12-12</td>
+      <td>1991-05-04</td>
+      <td>3.32</td>
+      <td>4.72</td>
+      <td>39.0</td>
+      <td>53.0</td>
+      <td>3.44</td>
+      <td>4.11</td>
+      <td>61.0</td>
+      <td>60.0</td>
+      <td>1.46</td>
+      <td>0.47</td>
+      <td>39.0</td>
       <td>50.0</td>
-      <td>78.0</td>
-      <td>76.0</td>
-      <td>0.1</td>
-      <td>0.2</td>
+      <td>83.0</td>
+      <td>92.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>000da3152b7b5ab1</td>
-      <td>6da99156486ed6c2</td>
-      <td>f70144caea5c4c80</td>
+      <td>20f316f96c9e4458</td>
+      <td>881bf86d4cba8578</td>
+      <td>00a905a4a4a2b071</td>
       <td>Fighter A</td>
-      <td>UFC 61: Bitter Rivals</td>
-      <td>2006-07-08</td>
-      <td>Joshua Burkman</td>
-      <td>Josh Neer</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>Nassourdine Imavov</td>
+      <td>Joaquin Buckley</td>
+      <td>75.0</td>
       <td>70.0</td>
-      <td>71.0</td>
+      <td>185.0</td>
       <td>170.0</td>
-      <td>170.0</td>
-      <td>72.0</td>
-      <td>72.0</td>
+      <td>75.0</td>
+      <td>76.0</td>
       <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1980-04-10</td>
-      <td>1983-03-24</td>
-      <td>2.69</td>
-      <td>3.29</td>
-      <td>43.0</td>
-      <td>46.0</td>
-      <td>3.13</td>
-      <td>3.63</td>
-      <td>51.0</td>
-      <td>58.0</td>
-      <td>2.53</td>
-      <td>1.09</td>
+      <td>Southpaw</td>
+      <td>1995-03-01</td>
+      <td>1994-04-27</td>
+      <td>4.53</td>
+      <td>3.87</td>
+      <td>54.0</td>
+      <td>33.0</td>
+      <td>3.26</td>
+      <td>3.31</td>
+      <td>61.0</td>
+      <td>57.0</td>
+      <td>0.87</td>
+      <td>1.51</td>
+      <td>31.0</td>
       <td>36.0</td>
-      <td>34.0</td>
-      <td>72.0</td>
-      <td>46.0</td>
-      <td>0.3</td>
-      <td>1.3</td>
+      <td>76.0</td>
+      <td>65.0</td>
+      <td>1.5</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>001441f70c293931</td>
-      <td>7826923b47f8d72a</td>
-      <td>1d00756835ca67c9</td>
+      <td>398db40015b3c81c</td>
+      <td>e1d40e8782d80bc2</td>
+      <td>00a905a4a4a2b071</td>
       <td>Fighter A</td>
-      <td>UFC Fight Night: Volkov vs. Aspinall</td>
-      <td>2022-03-19</td>
-      <td>Paddy Pimblett</td>
-      <td>Kazula Vargas</td>
-      <td>70.0</td>
-      <td>68.0</td>
-      <td>155.0</td>
-      <td>155.0</td>
-      <td>73.0</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>William Gomis</td>
+      <td>Jarno Errens</td>
+      <td>72.0</td>
       <td>71.0</td>
-      <td>Orthodox</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>73.0</td>
       <td>Southpaw</td>
-      <td>1995-01-03</td>
-      <td>1985-08-15</td>
-      <td>5.13</td>
-      <td>3.65</td>
+      <td>Orthodox</td>
+      <td>1997-06-13</td>
+      <td>1994-11-17</td>
+      <td>2.62</td>
+      <td>1.67</td>
+      <td>46.0</td>
+      <td>38.0</td>
+      <td>1.49</td>
+      <td>2.93</td>
+      <td>75.0</td>
       <td>52.0</td>
-      <td>53.0</td>
-      <td>3.70</td>
-      <td>1.77</td>
-      <td>41.0</td>
-      <td>57.0</td>
-      <td>0.98</td>
-      <td>0.40</td>
-      <td>25.0</td>
-      <td>25.0</td>
-      <td>56.0</td>
-      <td>30.0</td>
-      <td>1.6</td>
-      <td>0.4</td>
+      <td>1.06</td>
+      <td>0.00</td>
+      <td>60.0</td>
+      <td>0.0</td>
+      <td>81.0</td>
+      <td>33.0</td>
+      <td>0.7</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0019ec81fd706ade</td>
-      <td>85073dbd1be65ed9</td>
-      <td>3ae10ac4df3df05c</td>
-      <td>No Contest</td>
-      <td>UFC Fight Night: Reyes vs. Weidman</td>
-      <td>2019-10-18</td>
-      <td>Greg Hardy</td>
-      <td>Ben Sosoli</td>
-      <td>77.0</td>
-      <td>72.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>80.0</td>
-      <td>72.0</td>
-      <td>Orthodox</td>
+      <td>3e2f00991f511607</td>
+      <td>c2299ec916bc7c56</td>
+      <td>00a905a4a4a2b071</td>
+      <td>Fighter A</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>Benoit Saint Denis</td>
+      <td>Gabriel Miranda</td>
+      <td>71.0</td>
+      <td>71.0</td>
+      <td>155.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>71.0</td>
       <td>Southpaw</td>
-      <td>1988-07-28</td>
-      <td>1989-12-10</td>
-      <td>4.79</td>
-      <td>2.31</td>
-      <td>50.0</td>
-      <td>31.0</td>
-      <td>3.31</td>
-      <td>4.30</td>
-      <td>55.0</td>
-      <td>47.0</td>
-      <td>0.20</td>
-      <td>0.00</td>
-      <td>33.0</td>
+      <td>Orthodox</td>
+      <td>1995-12-18</td>
+      <td>1990-03-25</td>
+      <td>5.53</td>
+      <td>3.52</td>
+      <td>52.0</td>
+      <td>51.0</td>
+      <td>5.20</td>
+      <td>6.88</td>
+      <td>44.0</td>
+      <td>39.0</td>
+      <td>4.55</td>
+      <td>4.80</td>
+      <td>36.0</td>
+      <td>40.0</td>
+      <td>66.0</td>
       <td>0.0</td>
-      <td>64.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>1.4</td>
+      <td>2.4</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0027e179b743c86c</td>
-      <td>91ea901c458e95dd</td>
-      <td>f54200f1dfb9b5d4</td>
-      <td>Fighter A</td>
-      <td>UFC 185: Pettis vs Dos Anjos</td>
-      <td>2015-03-14</td>
-      <td>Jared Rosholt</td>
-      <td>Josh Copeland</td>
-      <td>74.0</td>
-      <td>73.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>75.0</td>
-      <td>NaN</td>
+      <td>7bced112f3229b1b</td>
+      <td>c21a036b4e012f1c</td>
+      <td>00a905a4a4a2b071</td>
+      <td>Fighter B</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>John Makdessi</td>
+      <td>Nasrat Haqparast</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>155.0</td>
+      <td>155.0</td>
+      <td>68.0</td>
+      <td>72.0</td>
       <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1986-08-04</td>
-      <td>1982-10-20</td>
-      <td>2.08</td>
-      <td>1.03</td>
-      <td>46.0</td>
-      <td>31.0</td>
-      <td>1.52</td>
-      <td>3.01</td>
-      <td>59.0</td>
-      <td>55.0</td>
-      <td>1.83</td>
+      <td>Southpaw</td>
+      <td>1985-05-03</td>
+      <td>1995-08-22</td>
+      <td>5.52</td>
+      <td>5.78</td>
+      <td>49.0</td>
+      <td>44.0</td>
+      <td>4.15</td>
+      <td>5.25</td>
+      <td>68.0</td>
+      <td>64.0</td>
       <td>0.00</td>
-      <td>41.0</td>
+      <td>0.31</td>
       <td>0.0</td>
-      <td>66.0</td>
-      <td>57.0</td>
-      <td>0.1</td>
+      <td>20.0</td>
+      <td>86.0</td>
+      <td>78.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -548,188 +543,188 @@ dataframe
     </tr>
     <tr>
       <th>7514</th>
-      <td>ffe4379d6bd1e82b</td>
-      <td>2a542ee8a8b83559</td>
-      <td>0cf935519d439ba6</td>
+      <td>79817ab0129c5598</td>
+      <td>634bb0de2eb043b4</td>
+      <td>ff9578cdbfabd323</td>
       <td>Fighter A</td>
-      <td>UFC 39: The Warriors Return</td>
-      <td>2002-09-27</td>
-      <td>Tim Sylvia</td>
-      <td>Wesley Correira</td>
-      <td>80.0</td>
-      <td>75.0</td>
-      <td>265.0</td>
-      <td>260.0</td>
-      <td>80.0</td>
-      <td>NaN</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Cristiane Justino</td>
+      <td>Tonya Evinger</td>
+      <td>68.0</td>
+      <td>67.0</td>
+      <td>145.0</td>
+      <td>135.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
       <td>Orthodox</td>
       <td>Orthodox</td>
-      <td>1976-03-05</td>
-      <td>1978-11-11</td>
-      <td>4.23</td>
-      <td>2.60</td>
-      <td>41.0</td>
-      <td>36.0</td>
-      <td>2.61</td>
-      <td>8.80</td>
-      <td>61.0</td>
-      <td>40.0</td>
-      <td>0.11</td>
-      <td>0.00</td>
-      <td>100.0</td>
-      <td>0.0</td>
-      <td>75.0</td>
-      <td>90.0</td>
-      <td>0.1</td>
-      <td>0.0</td>
+      <td>1985-07-09</td>
+      <td>1981-06-04</td>
+      <td>7.28</td>
+      <td>1.16</td>
+      <td>52.0</td>
+      <td>42.0</td>
+      <td>2.25</td>
+      <td>4.02</td>
+      <td>64.0</td>
+      <td>38.0</td>
+      <td>0.66</td>
+      <td>0.93</td>
+      <td>55.0</td>
+      <td>30.0</td>
+      <td>94.0</td>
+      <td>33.0</td>
+      <td>0.4</td>
+      <td>0.9</td>
     </tr>
     <tr>
       <th>7515</th>
-      <td>ffe629a5232a878b</td>
-      <td>08ae5cd9aef7ddd3</td>
-      <td>108afe61a26bcbf4</td>
+      <td>ac9e19a4075f6557</td>
+      <td>cb696ebfb6598724</td>
+      <td>ff9578cdbfabd323</td>
       <td>Fighter A</td>
-      <td>UFC 43: Meltdown</td>
-      <td>2003-06-06</td>
-      <td>Kimo Leopoldo</td>
-      <td>David Abbott</td>
-      <td>75.0</td>
-      <td>72.0</td>
-      <td>235.0</td>
-      <td>265.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Orthodox</td>
-      <td>Switch</td>
-      <td>1968-01-05</td>
-      <td>None</td>
-      <td>0.76</td>
-      <td>1.35</td>
-      <td>83.0</td>
-      <td>30.0</td>
-      <td>2.12</td>
-      <td>3.55</td>
-      <td>30.0</td>
-      <td>38.0</td>
-      <td>4.55</td>
-      <td>1.07</td>
-      <td>100.0</td>
-      <td>33.0</td>
-      <td>0.0</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Aljamain Sterling</td>
+      <td>Renan Barao</td>
+      <td>67.0</td>
       <td>66.0</td>
-      <td>2.3</td>
-      <td>0.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>70.0</td>
+      <td>Orthodox</td>
+      <td>Orthodox</td>
+      <td>1989-07-31</td>
+      <td>1987-01-31</td>
+      <td>4.73</td>
+      <td>3.78</td>
+      <td>52.0</td>
+      <td>36.0</td>
+      <td>2.41</td>
+      <td>3.90</td>
+      <td>58.0</td>
+      <td>57.0</td>
+      <td>1.97</td>
+      <td>1.49</td>
+      <td>24.0</td>
+      <td>41.0</td>
+      <td>45.0</td>
+      <td>91.0</td>
+      <td>0.8</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>7516</th>
-      <td>ffea776913451b6d</td>
-      <td>22a92d7f62195791</td>
-      <td>ad4e9055bf8cd04d</td>
+      <td>b8c967c742d3c107</td>
+      <td>f2925e6db404bf1d</td>
+      <td>ff9578cdbfabd323</td>
       <td>Fighter A</td>
-      <td>UFC 184: Rousey vs Zingano</td>
-      <td>2015-02-28</td>
-      <td>Tony Ferguson</td>
-      <td>Gleison Tibau</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Robbie Lawler</td>
+      <td>Donald Cerrone</td>
       <td>71.0</td>
-      <td>70.0</td>
+      <td>73.0</td>
+      <td>170.0</td>
       <td>155.0</td>
-      <td>155.0</td>
-      <td>76.0</td>
-      <td>71.0</td>
-      <td>Orthodox</td>
+      <td>74.0</td>
+      <td>73.0</td>
       <td>Southpaw</td>
-      <td>1984-02-12</td>
-      <td>1983-10-07</td>
-      <td>4.94</td>
-      <td>1.95</td>
-      <td>45.0</td>
-      <td>31.0</td>
+      <td>Orthodox</td>
+      <td>1982-03-20</td>
+      <td>1983-03-29</td>
+      <td>3.85</td>
       <td>4.41</td>
-      <td>2.51</td>
-      <td>55.0</td>
-      <td>63.0</td>
-      <td>0.39</td>
-      <td>4.08</td>
-      <td>35.0</td>
-      <td>53.0</td>
-      <td>67.0</td>
-      <td>92.0</td>
-      <td>0.9</td>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>7517</th>
-      <td>fffa21388cdd78b7</td>
-      <td>c80095f6092271a7</td>
-      <td>eae4aec1a5a8ff01</td>
-      <td>Fighter A</td>
-      <td>UFC 166: Velasquez vs Dos Santos 3</td>
-      <td>2013-10-19</td>
-      <td>Tim Boetsch</td>
-      <td>CB Dollaway</td>
-      <td>72.0</td>
-      <td>74.0</td>
-      <td>185.0</td>
-      <td>185.0</td>
-      <td>74.0</td>
-      <td>76.0</td>
-      <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1981-01-28</td>
-      <td>1983-08-10</td>
-      <td>2.93</td>
-      <td>2.65</td>
-      <td>50.0</td>
       <td>47.0</td>
-      <td>2.90</td>
-      <td>2.58</td>
-      <td>57.0</td>
-      <td>54.0</td>
-      <td>1.45</td>
-      <td>3.55</td>
-      <td>34.0</td>
-      <td>54.0</td>
+      <td>46.0</td>
+      <td>4.67</td>
+      <td>4.48</td>
       <td>59.0</td>
-      <td>62.0</td>
-      <td>0.8</td>
+      <td>53.0</td>
+      <td>0.65</td>
+      <td>1.16</td>
+      <td>64.0</td>
+      <td>33.0</td>
+      <td>65.0</td>
+      <td>73.0</td>
+      <td>0.0</td>
       <td>1.2</td>
     </tr>
     <tr>
-      <th>7518</th>
-      <td>fffdc57255274be1</td>
-      <td>2f5cbecbbe18bac4</td>
-      <td>5717efc6f271cd52</td>
-      <td>Fighter B</td>
-      <td>UFC 283: Teixeira vs. Hill</td>
-      <td>2023-01-21</td>
-      <td>Shamil Abdurakhimov</td>
-      <td>Jailton Almeida</td>
-      <td>75.0</td>
-      <td>75.0</td>
-      <td>235.0</td>
-      <td>205.0</td>
-      <td>76.0</td>
-      <td>79.0</td>
+      <th>7517</th>
+      <td>dffad417175400ba</td>
+      <td>3974fa35c917af1d</td>
+      <td>ff9578cdbfabd323</td>
+      <td>Fighter A</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Ricardo Lamas</td>
+      <td>Jason Knight</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>71.0</td>
       <td>Orthodox</td>
       <td>Orthodox</td>
-      <td>1981-09-02</td>
-      <td>1991-06-26</td>
-      <td>2.41</td>
-      <td>2.78</td>
-      <td>44.0</td>
-      <td>64.0</td>
+      <td>1982-05-21</td>
+      <td>1992-07-14</td>
+      <td>3.13</td>
+      <td>2.95</td>
+      <td>47.0</td>
+      <td>33.0</td>
+      <td>2.87</td>
       <td>3.02</td>
-      <td>0.52</td>
-      <td>55.0</td>
+      <td>57.0</td>
+      <td>51.0</td>
+      <td>1.84</td>
+      <td>1.31</td>
+      <td>33.0</td>
+      <td>31.0</td>
+      <td>46.0</td>
+      <td>47.0</td>
+      <td>0.9</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <th>7518</th>
+      <td>e80a8338d86e730b</td>
+      <td>05b43e0ead3df345</td>
+      <td>ff9578cdbfabd323</td>
+      <td>Fighter B</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Kailin Curran</td>
+      <td>Aleksandra Albu</td>
+      <td>64.0</td>
+      <td>62.0</td>
+      <td>115.0</td>
+      <td>115.0</td>
+      <td>65.0</td>
+      <td>63.0</td>
+      <td>Orthodox</td>
+      <td>Orthodox</td>
+      <td>1991-04-11</td>
+      <td>1990-07-14</td>
+      <td>3.89</td>
+      <td>4.83</td>
       <td>43.0</td>
-      <td>1.01</td>
-      <td>5.14</td>
-      <td>23.0</td>
-      <td>55.0</td>
-      <td>45.0</td>
-      <td>75.0</td>
-      <td>0.1</td>
-      <td>2.4</td>
+      <td>47.0</td>
+      <td>4.75</td>
+      <td>5.56</td>
+      <td>53.0</td>
+      <td>38.0</td>
+      <td>2.00</td>
+      <td>2.27</td>
+      <td>57.0</td>
+      <td>50.0</td>
+      <td>61.0</td>
+      <td>77.0</td>
+      <td>0.6</td>
+      <td>0.4</td>
     </tr>
   </tbody>
 </table>
@@ -891,188 +886,188 @@ missing_value_data
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
-      <td>0027e179b743c86c</td>
-      <td>91ea901c458e95dd</td>
-      <td>f54200f1dfb9b5d4</td>
+      <th>60</th>
+      <td>3c2ac653409cf5f2</td>
+      <td>0e041d43a47d2e4b</td>
+      <td>02fc8f50f56eb307</td>
       <td>Fighter A</td>
-      <td>UFC 185: Pettis vs Dos Anjos</td>
-      <td>2015-03-14</td>
-      <td>Jared Rosholt</td>
-      <td>Josh Copeland</td>
-      <td>74.0</td>
-      <td>73.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>75.0</td>
-      <td>NaN</td>
-      <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1986-08-04</td>
-      <td>1982-10-20</td>
-      <td>2.08</td>
-      <td>1.03</td>
-      <td>46.0</td>
-      <td>31.0</td>
-      <td>1.52</td>
-      <td>3.01</td>
-      <td>59.0</td>
-      <td>55.0</td>
-      <td>1.83</td>
-      <td>0.00</td>
-      <td>41.0</td>
-      <td>0.0</td>
-      <td>66.0</td>
-      <td>57.0</td>
-      <td>0.1</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>0072df705378477c</td>
-      <td>9b68bf67c5695185</td>
-      <td>2f3f12002564bb55</td>
-      <td>Fighter B</td>
-      <td>UFC 117: Silva vs Sonnen</td>
-      <td>2010-08-07</td>
-      <td>Todd Brown</td>
-      <td>Tim Boetsch</td>
-      <td>71.0</td>
+      <td>UFC 36: Worlds Collide</td>
+      <td>2002-03-22</td>
+      <td>Matt Lindland</td>
+      <td>Pat Miletich</td>
       <td>72.0</td>
-      <td>205.0</td>
+      <td>70.0</td>
       <td>185.0</td>
-      <td>NaN</td>
+      <td>170.0</td>
       <td>74.0</td>
+      <td>NaN</td>
+      <td>Southpaw</td>
       <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1976-12-13</td>
-      <td>1981-01-28</td>
-      <td>2.15</td>
-      <td>2.93</td>
-      <td>45.0</td>
+      <td>1970-05-17</td>
+      <td>1968-03-09</td>
+      <td>2.62</td>
+      <td>1.79</td>
       <td>50.0</td>
-      <td>3.85</td>
-      <td>2.90</td>
+      <td>45.0</td>
+      <td>1.56</td>
+      <td>1.66</td>
+      <td>52.0</td>
+      <td>63.0</td>
+      <td>3.01</td>
+      <td>1.96</td>
       <td>48.0</td>
-      <td>57.0</td>
-      <td>0.00</td>
-      <td>1.45</td>
-      <td>0.0</td>
-      <td>34.0</td>
-      <td>50.0</td>
-      <td>59.0</td>
-      <td>0.0</td>
-      <td>0.8</td>
+      <td>100.0</td>
+      <td>60.0</td>
+      <td>54.0</td>
+      <td>1.3</td>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>22</th>
-      <td>00731068c3195f7f</td>
-      <td>22aa91e402d0fe1f</td>
-      <td>505934897b8b4824</td>
+      <th>61</th>
+      <td>7468f870b08aaccc</td>
+      <td>1ff9589f9065a9ed</td>
+      <td>02fc8f50f56eb307</td>
       <td>Fighter A</td>
-      <td>UFC on FX: Maynard vs Guida</td>
-      <td>2012-06-22</td>
-      <td>Ramsey Nijem</td>
-      <td>CJ Keith</td>
-      <td>71.0</td>
-      <td>72.0</td>
-      <td>155.0</td>
-      <td>155.0</td>
+      <td>UFC 36: Worlds Collide</td>
+      <td>2002-03-22</td>
+      <td>Frank Mir</td>
+      <td>Pete Williams</td>
       <td>75.0</td>
-      <td>NaN</td>
-      <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1988-04-01</td>
-      <td>1986-08-09</td>
-      <td>3.05</td>
-      <td>0.86</td>
-      <td>44.0</td>
-      <td>50.0</td>
-      <td>1.62</td>
-      <td>1.82</td>
-      <td>62.0</td>
-      <td>50.0</td>
-      <td>5.32</td>
-      <td>0.00</td>
-      <td>62.0</td>
-      <td>0.0</td>
-      <td>55.0</td>
-      <td>62.0</td>
-      <td>1.1</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>00835554f95fa911</td>
-      <td>429e7d3725852ce9</td>
-      <td>a6a9ab5a824e8f66</td>
-      <td>Fighter A</td>
-      <td>UFC 2: No Way Out</td>
-      <td>1994-03-11</td>
-      <td>Royce Gracie</td>
-      <td>Patrick Smith</td>
-      <td>73.0</td>
-      <td>74.0</td>
-      <td>175.0</td>
-      <td>225.0</td>
-      <td>NaN</td>
+      <td>75.0</td>
+      <td>264.0</td>
+      <td>235.0</td>
+      <td>79.0</td>
       <td>NaN</td>
       <td>Southpaw</td>
       <td>Orthodox</td>
-      <td>1966-12-12</td>
-      <td>1963-08-28</td>
-      <td>0.88</td>
-      <td>0.00</td>
-      <td>41.0</td>
-      <td>0.0</td>
-      <td>1.13</td>
-      <td>0.00</td>
-      <td>37.0</td>
-      <td>0.0</td>
-      <td>0.00</td>
-      <td>0.00</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>66.0</td>
-      <td>0.0</td>
-      <td>0.8</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>008d0158831dcbd4</td>
-      <td>1fcfc3709fe58151</td>
-      <td>194fc025f9355db6</td>
-      <td>Fighter A</td>
-      <td>UFC Fight Night: Jedrzejczyk vs Penne</td>
-      <td>2015-06-20</td>
-      <td>Peter Sobotta</td>
-      <td>Steve Kennedy</td>
-      <td>72.0</td>
-      <td>71.0</td>
-      <td>170.0</td>
-      <td>170.0</td>
-      <td>75.0</td>
-      <td>NaN</td>
-      <td>Southpaw</td>
-      <td>Orthodox</td>
-      <td>1987-01-11</td>
-      <td>1983-03-07</td>
-      <td>2.14</td>
-      <td>2.28</td>
+      <td>1979-05-24</td>
+      <td>1975-07-10</td>
+      <td>2.18</td>
+      <td>0.61</td>
+      <td>47.0</td>
+      <td>62.0</td>
+      <td>3.84</td>
+      <td>2.77</td>
+      <td>38.0</td>
       <td>40.0</td>
+      <td>2.02</td>
+      <td>1.84</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>54.0</td>
+      <td>16.0</td>
+      <td>2.0</td>
+      <td>0.9</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>87f39e0d82349c3b</td>
+      <td>029880cdbf5ca089</td>
+      <td>02fc8f50f56eb307</td>
+      <td>Fighter A</td>
+      <td>UFC 36: Worlds Collide</td>
+      <td>2002-03-22</td>
+      <td>Sean Sherk</td>
+      <td>Jutaro Nakao</td>
+      <td>66.0</td>
+      <td>69.0</td>
+      <td>155.0</td>
+      <td>170.0</td>
+      <td>67.0</td>
+      <td>NaN</td>
+      <td>Orthodox</td>
+      <td>Southpaw</td>
+      <td>1973-08-05</td>
+      <td>1970-11-30</td>
+      <td>2.17</td>
+      <td>0.53</td>
       <td>35.0</td>
-      <td>2.90</td>
-      <td>5.52</td>
-      <td>58.0</td>
-      <td>45.0</td>
-      <td>1.53</td>
-      <td>2.51</td>
-      <td>32.0</td>
-      <td>33.0</td>
-      <td>77.0</td>
+      <td>38.0</td>
+      <td>2.71</td>
+      <td>1.06</td>
+      <td>55.0</td>
+      <td>44.0</td>
+      <td>4.09</td>
+      <td>0.38</td>
+      <td>46.0</td>
+      <td>50.0</td>
+      <td>56.0</td>
+      <td>56.0</td>
+      <td>0.4</td>
       <td>0.0</td>
-      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>e7833d5728f3ebef</td>
+      <td>621a6c59f88a44fe</td>
+      <td>02fc8f50f56eb307</td>
+      <td>Fighter A</td>
+      <td>UFC 36: Worlds Collide</td>
+      <td>2002-03-22</td>
+      <td>Matt Hughes</td>
+      <td>Hayato Sakurai</td>
+      <td>69.0</td>
+      <td>67.0</td>
+      <td>170.0</td>
+      <td>168.0</td>
+      <td>73.0</td>
+      <td>NaN</td>
+      <td>Switch</td>
+      <td>Orthodox</td>
+      <td>1973-10-13</td>
+      <td>1975-08-24</td>
+      <td>2.14</td>
+      <td>2.45</td>
+      <td>53.0</td>
+      <td>49.0</td>
+      <td>1.36</td>
+      <td>1.94</td>
+      <td>53.0</td>
+      <td>59.0</td>
+      <td>2.95</td>
+      <td>1.87</td>
+      <td>50.0</td>
+      <td>69.0</td>
+      <td>35.0</td>
+      <td>56.0</td>
+      <td>1.2</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>ef83377d584ec055</td>
+      <td>86dfed7cc24a9fa7</td>
+      <td>02fc8f50f56eb307</td>
+      <td>Fighter A</td>
+      <td>UFC 36: Worlds Collide</td>
+      <td>2002-03-22</td>
+      <td>Matt Serra</td>
+      <td>Kelly Dullanty</td>
+      <td>66.0</td>
+      <td>68.0</td>
+      <td>170.0</td>
+      <td>155.0</td>
+      <td>68.0</td>
+      <td>NaN</td>
+      <td>Orthodox</td>
+      <td>Orthodox</td>
+      <td>1974-06-02</td>
+      <td>1977-11-04</td>
+      <td>1.98</td>
+      <td>0.00</td>
+      <td>39.0</td>
+      <td>0.0</td>
+      <td>2.64</td>
+      <td>0.67</td>
+      <td>46.0</td>
+      <td>75.0</td>
+      <td>2.05</td>
+      <td>0.00</td>
+      <td>20.0</td>
+      <td>0.0</td>
+      <td>38.0</td>
+      <td>66.0</td>
+      <td>0.9</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1113,189 +1108,189 @@ missing_value_data
       <td>...</td>
     </tr>
     <tr>
-      <th>7486</th>
-      <td>fea1931b041cc5ff</td>
-      <td>6aa1cbc1466e9a0b</td>
-      <td>271fe91f4ba9d2c5</td>
+      <th>7422</th>
+      <td>ddb950831580a5fe</td>
+      <td>84a067c46306a737</td>
+      <td>fbbde91f7bc2d3c5</td>
       <td>Fighter A</td>
-      <td>UFC 55: Fury</td>
-      <td>2005-10-07</td>
-      <td>Marcio Cruz</td>
-      <td>Keigo Kunihara</td>
-      <td>76.0</td>
-      <td>72.0</td>
-      <td>232.0</td>
-      <td>235.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1978-04-24</td>
-      <td>None</td>
-      <td>2.92</td>
-      <td>0.17</td>
-      <td>46.0</td>
-      <td>10.0</td>
-      <td>1.51</td>
-      <td>1.99</td>
-      <td>68.0</td>
-      <td>57.0</td>
-      <td>0.53</td>
-      <td>4.97</td>
-      <td>7.0</td>
-      <td>40.0</td>
-      <td>37.0</td>
-      <td>100.0</td>
-      <td>1.6</td>
-      <td>2.5</td>
-    </tr>
-    <tr>
-      <th>7495</th>
-      <td>fee1d48d7bc17e56</td>
-      <td>a8e6a69796280f17</td>
-      <td>577ec7e108b94be3</td>
-      <td>Fighter A</td>
-      <td>Ortiz vs Shamrock 3: The Final Chapter</td>
-      <td>2006-10-10</td>
-      <td>Nate Marquardt</td>
-      <td>Crafton Wallace</td>
-      <td>72.0</td>
-      <td>72.0</td>
-      <td>185.0</td>
-      <td>185.0</td>
+      <td>The Ultimate Fighter: Team Couture vs. Team Li...</td>
+      <td>2005-04-09</td>
+      <td>Sam Hoger</td>
+      <td>Bobby Southworth</td>
       <td>74.0</td>
+      <td>74.0</td>
+      <td>205.0</td>
+      <td>205.0</td>
+      <td>NaN</td>
       <td>NaN</td>
       <td>Orthodox</td>
       <td>Orthodox</td>
-      <td>1979-04-20</td>
-      <td>1975-11-10</td>
-      <td>2.71</td>
-      <td>1.55</td>
-      <td>49.0</td>
+      <td>1980-06-28</td>
+      <td>1969-12-16</td>
+      <td>1.07</td>
+      <td>0.99</td>
+      <td>25.0</td>
+      <td>39.0</td>
+      <td>2.25</td>
+      <td>1.38</td>
+      <td>57.0</td>
+      <td>65.0</td>
+      <td>1.12</td>
+      <td>3.98</td>
+      <td>38.0</td>
+      <td>78.0</td>
+      <td>29.0</td>
+      <td>64.0</td>
+      <td>1.3</td>
+      <td>1.3</td>
+    </tr>
+    <tr>
+      <th>7423</th>
+      <td>f434775e97920d95</td>
+      <td>52cae54377b433b7</td>
+      <td>fbbde91f7bc2d3c5</td>
+      <td>Fighter A</td>
+      <td>The Ultimate Fighter: Team Couture vs. Team Li...</td>
+      <td>2005-04-09</td>
+      <td>Nate Quarry</td>
+      <td>Lodune Sincaid</td>
+      <td>72.0</td>
+      <td>69.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>72.0</td>
+      <td>NaN</td>
+      <td>Open Stance</td>
+      <td>Orthodox</td>
+      <td>1972-03-18</td>
+      <td>1973-05-07</td>
+      <td>4.96</td>
+      <td>2.72</td>
       <td>44.0</td>
-      <td>2.32</td>
-      <td>2.36</td>
-      <td>55.0</td>
-      <td>47.0</td>
-      <td>1.87</td>
-      <td>0.00</td>
-      <td>51.0</td>
-      <td>0.0</td>
-      <td>70.0</td>
       <td>42.0</td>
-      <td>0.8</td>
+      <td>2.80</td>
+      <td>6.17</td>
+      <td>66.0</td>
+      <td>57.0</td>
+      <td>0.25</td>
+      <td>0.00</td>
+      <td>33.0</td>
+      <td>0.0</td>
+      <td>60.0</td>
+      <td>75.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
-      <th>7509</th>
-      <td>ff8802aae3b81c3f</td>
-      <td>75e5fec9f72910ef</td>
-      <td>304fcd812f12c589</td>
+      <th>7434</th>
+      <td>f8bb0aed83bd8638</td>
+      <td>27b164b0d1833df0</td>
+      <td>fc1868f56d3036eb</td>
+      <td>Fighter B</td>
+      <td>UFC Fight Night: Stephens vs. Choi</td>
+      <td>2018-01-14</td>
+      <td>Kalindra Faria</td>
+      <td>Jessica Eye</td>
+      <td>67.0</td>
+      <td>66.0</td>
+      <td>125.0</td>
+      <td>125.0</td>
+      <td>NaN</td>
+      <td>66.0</td>
+      <td>Switch</td>
+      <td>Orthodox</td>
+      <td>1986-07-23</td>
+      <td>1986-07-27</td>
+      <td>2.23</td>
+      <td>3.86</td>
+      <td>56.0</td>
+      <td>37.0</td>
+      <td>1.44</td>
+      <td>4.19</td>
+      <td>45.0</td>
+      <td>55.0</td>
+      <td>1.31</td>
+      <td>0.58</td>
+      <td>66.0</td>
+      <td>40.0</td>
+      <td>20.0</td>
+      <td>57.0</td>
+      <td>0.7</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>7473</th>
+      <td>2573a9a722f238f4</td>
+      <td>ca2efc9d7d523c43</td>
+      <td>fd7acf42bd6e7e95</td>
       <td>Fighter A</td>
-      <td>UFC Fight Night: Stout vs Fisher</td>
-      <td>2007-06-12</td>
-      <td>Gleison Tibau</td>
-      <td>Jeff Cox</td>
-      <td>70.0</td>
-      <td>70.0</td>
-      <td>155.0</td>
-      <td>155.0</td>
-      <td>71.0</td>
+      <td>UFC Fight Night: Bader vs Saint Preux</td>
+      <td>2014-08-16</td>
+      <td>Shawn Jordan</td>
+      <td>Jack May</td>
+      <td>72.0</td>
+      <td>80.0</td>
+      <td>260.0</td>
+      <td>255.0</td>
+      <td>75.0</td>
       <td>NaN</td>
       <td>Southpaw</td>
-      <td>Orthodox</td>
-      <td>1983-10-07</td>
-      <td>1968-08-02</td>
-      <td>1.95</td>
-      <td>0.56</td>
-      <td>31.0</td>
-      <td>25.0</td>
-      <td>2.51</td>
-      <td>1.69</td>
-      <td>63.0</td>
-      <td>33.0</td>
-      <td>4.08</td>
-      <td>4.23</td>
-      <td>53.0</td>
+      <td>Switch</td>
+      <td>1984-10-21</td>
+      <td>1981-04-14</td>
+      <td>2.87</td>
+      <td>1.52</td>
       <td>50.0</td>
-      <td>92.0</td>
-      <td>80.0</td>
-      <td>0.8</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>7514</th>
-      <td>ffe4379d6bd1e82b</td>
-      <td>2a542ee8a8b83559</td>
-      <td>0cf935519d439ba6</td>
-      <td>Fighter A</td>
-      <td>UFC 39: The Warriors Return</td>
-      <td>2002-09-27</td>
-      <td>Tim Sylvia</td>
-      <td>Wesley Correira</td>
-      <td>80.0</td>
-      <td>75.0</td>
-      <td>265.0</td>
-      <td>260.0</td>
-      <td>80.0</td>
-      <td>NaN</td>
-      <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1976-03-05</td>
-      <td>1978-11-11</td>
-      <td>4.23</td>
-      <td>2.60</td>
-      <td>41.0</td>
-      <td>36.0</td>
-      <td>2.61</td>
-      <td>8.80</td>
-      <td>61.0</td>
-      <td>40.0</td>
-      <td>0.11</td>
-      <td>0.00</td>
-      <td>100.0</td>
-      <td>0.0</td>
-      <td>75.0</td>
-      <td>90.0</td>
+      <td>38.0</td>
+      <td>3.30</td>
+      <td>3.29</td>
+      <td>47.0</td>
+      <td>33.0</td>
+      <td>1.97</td>
+      <td>0.91</td>
+      <td>38.0</td>
+      <td>33.0</td>
+      <td>76.0</td>
+      <td>20.0</td>
       <td>0.1</td>
       <td>0.0</td>
     </tr>
     <tr>
-      <th>7515</th>
-      <td>ffe629a5232a878b</td>
-      <td>08ae5cd9aef7ddd3</td>
-      <td>108afe61a26bcbf4</td>
-      <td>Fighter A</td>
-      <td>UFC 43: Meltdown</td>
-      <td>2003-06-06</td>
-      <td>Kimo Leopoldo</td>
-      <td>David Abbott</td>
-      <td>75.0</td>
-      <td>72.0</td>
-      <td>235.0</td>
-      <td>265.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Orthodox</td>
-      <td>Switch</td>
-      <td>1968-01-05</td>
-      <td>None</td>
-      <td>0.76</td>
-      <td>1.35</td>
-      <td>83.0</td>
-      <td>30.0</td>
-      <td>2.12</td>
-      <td>3.55</td>
-      <td>30.0</td>
-      <td>38.0</td>
-      <td>4.55</td>
-      <td>1.07</td>
-      <td>100.0</td>
-      <td>33.0</td>
-      <td>0.0</td>
+      <th>7478</th>
+      <td>99dc6aa635a9cf98</td>
+      <td>9eb069062a0cfc13</td>
+      <td>fd7acf42bd6e7e95</td>
+      <td>Fighter B</td>
+      <td>UFC Fight Night: Bader vs Saint Preux</td>
+      <td>2014-08-16</td>
+      <td>Nolan Ticman</td>
+      <td>Frankie Saenz</td>
       <td>66.0</td>
-      <td>2.3</td>
+      <td>66.0</td>
+      <td>125.0</td>
+      <td>135.0</td>
+      <td>NaN</td>
+      <td>66.0</td>
+      <td>Orthodox</td>
+      <td>Orthodox</td>
+      <td>1988-05-17</td>
+      <td>1980-08-12</td>
+      <td>2.57</td>
+      <td>3.94</td>
+      <td>47.0</td>
+      <td>47.0</td>
+      <td>2.53</td>
+      <td>3.50</td>
+      <td>67.0</td>
+      <td>52.0</td>
+      <td>0.00</td>
+      <td>1.74</td>
       <td>0.0</td>
+      <td>31.0</td>
+      <td>60.0</td>
+      <td>61.0</td>
+      <td>0.0</td>
+      <td>0.1</td>
     </tr>
   </tbody>
 </table>
@@ -1511,155 +1506,7 @@ dataframe.loc[dataframe['fighter_a_stance'] == 'Open Stance']
   </thead>
   <tbody>
     <tr>
-      <th>456</th>
-      <td>0ea087a71863184d</td>
-      <td>59583ff832fe9d68</td>
-      <td>49efbdc6c9f650c4</td>
-      <td>Fighter A</td>
-      <td>UFC 110: Nogueira vs Velasquez</td>
-      <td>2010-02-20</td>
-      <td>Krzysztof Soszynski</td>
-      <td>Stephan Bonnar</td>
-      <td>73.0</td>
-      <td>76.0</td>
-      <td>205.0</td>
-      <td>205.0</td>
-      <td>77.0</td>
-      <td>79.0</td>
-      <td>Open Stance</td>
-      <td>Orthodox</td>
-      <td>1977-08-02</td>
-      <td>1977-04-04</td>
-      <td>3.37</td>
-      <td>2.76</td>
-      <td>39.0</td>
-      <td>38.0</td>
-      <td>3.13</td>
-      <td>3.01</td>
-      <td>58.0</td>
-      <td>52.0</td>
-      <td>0.52</td>
-      <td>1.32</td>
-      <td>25.0</td>
-      <td>40.0</td>
-      <td>71.0</td>
-      <td>60.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>967</th>
-      <td>1f64e532f942ef57</td>
-      <td>59583ff832fe9d68</td>
-      <td>1652f3213655b935</td>
-      <td>Fighter A</td>
-      <td>UFC 97: Redemption</td>
-      <td>2009-04-18</td>
-      <td>Krzysztof Soszynski</td>
-      <td>Brian Stann</td>
-      <td>73.0</td>
-      <td>73.0</td>
-      <td>205.0</td>
-      <td>205.0</td>
-      <td>77.0</td>
-      <td>74.0</td>
-      <td>Open Stance</td>
-      <td>Orthodox</td>
-      <td>1977-08-02</td>
-      <td>1980-09-24</td>
-      <td>3.37</td>
-      <td>3.28</td>
-      <td>39.0</td>
-      <td>42.0</td>
-      <td>3.13</td>
-      <td>2.65</td>
-      <td>58.0</td>
-      <td>59.0</td>
-      <td>0.52</td>
-      <td>0.12</td>
-      <td>25.0</td>
-      <td>12.0</td>
-      <td>71.0</td>
-      <td>60.0</td>
-      <td>1.0</td>
-      <td>0.3</td>
-    </tr>
-    <tr>
-      <th>2466</th>
-      <td>516868e246064e2b</td>
-      <td>52cae54377b433b7</td>
-      <td>3ed134d85dfbd7b4</td>
-      <td>Fighter B</td>
-      <td>UFC Fight Night: Florian vs Gomi</td>
-      <td>2010-03-31</td>
-      <td>Nate Quarry</td>
-      <td>Jorge Rivera</td>
-      <td>72.0</td>
-      <td>73.0</td>
-      <td>185.0</td>
-      <td>185.0</td>
-      <td>72.0</td>
-      <td>73.0</td>
-      <td>Open Stance</td>
-      <td>Orthodox</td>
-      <td>1972-03-18</td>
-      <td>1972-02-28</td>
-      <td>4.96</td>
-      <td>3.16</td>
-      <td>44.0</td>
-      <td>48.0</td>
-      <td>2.80</td>
-      <td>2.64</td>
-      <td>66.0</td>
-      <td>54.0</td>
-      <td>0.25</td>
-      <td>0.84</td>
-      <td>33.0</td>
-      <td>50.0</td>
-      <td>60.0</td>
-      <td>63.0</td>
-      <td>0.0</td>
-      <td>0.1</td>
-    </tr>
-    <tr>
-      <th>2530</th>
-      <td>536c26ef4da9ace7</td>
-      <td>59583ff832fe9d68</td>
-      <td>140745cbbcb023ac</td>
-      <td>Fighter B</td>
-      <td>UFC 116: Lesnar vs Carwin</td>
-      <td>2010-07-03</td>
-      <td>Krzysztof Soszynski</td>
-      <td>Stephan Bonnar</td>
-      <td>73.0</td>
-      <td>76.0</td>
-      <td>205.0</td>
-      <td>205.0</td>
-      <td>77.0</td>
-      <td>79.0</td>
-      <td>Open Stance</td>
-      <td>Orthodox</td>
-      <td>1977-08-02</td>
-      <td>1977-04-04</td>
-      <td>3.37</td>
-      <td>2.76</td>
-      <td>39.0</td>
-      <td>38.0</td>
-      <td>3.13</td>
-      <td>3.01</td>
-      <td>58.0</td>
-      <td>52.0</td>
-      <td>0.52</td>
-      <td>1.32</td>
-      <td>25.0</td>
-      <td>40.0</td>
-      <td>71.0</td>
-      <td>60.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>2861</th>
+      <th>392</th>
       <td>5e3f46e6f46d5a90</td>
       <td>59583ff832fe9d68</td>
       <td>0ff11cc094e887bc</td>
@@ -1696,7 +1543,81 @@ dataframe.loc[dataframe['fighter_a_stance'] == 'Open Stance']
       <td>1.1</td>
     </tr>
     <tr>
-      <th>3617</th>
+      <th>490</th>
+      <td>536c26ef4da9ace7</td>
+      <td>59583ff832fe9d68</td>
+      <td>140745cbbcb023ac</td>
+      <td>Fighter B</td>
+      <td>UFC 116: Lesnar vs Carwin</td>
+      <td>2010-07-03</td>
+      <td>Krzysztof Soszynski</td>
+      <td>Stephan Bonnar</td>
+      <td>73.0</td>
+      <td>76.0</td>
+      <td>205.0</td>
+      <td>205.0</td>
+      <td>77.0</td>
+      <td>79.0</td>
+      <td>Open Stance</td>
+      <td>Orthodox</td>
+      <td>1977-08-02</td>
+      <td>1977-04-04</td>
+      <td>3.37</td>
+      <td>2.76</td>
+      <td>39.0</td>
+      <td>38.0</td>
+      <td>3.13</td>
+      <td>3.01</td>
+      <td>58.0</td>
+      <td>52.0</td>
+      <td>0.52</td>
+      <td>1.32</td>
+      <td>25.0</td>
+      <td>40.0</td>
+      <td>71.0</td>
+      <td>60.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>605</th>
+      <td>1f64e532f942ef57</td>
+      <td>59583ff832fe9d68</td>
+      <td>1652f3213655b935</td>
+      <td>Fighter A</td>
+      <td>UFC 97: Redemption</td>
+      <td>2009-04-18</td>
+      <td>Krzysztof Soszynski</td>
+      <td>Brian Stann</td>
+      <td>73.0</td>
+      <td>73.0</td>
+      <td>205.0</td>
+      <td>205.0</td>
+      <td>77.0</td>
+      <td>74.0</td>
+      <td>Open Stance</td>
+      <td>Orthodox</td>
+      <td>1977-08-02</td>
+      <td>1980-09-24</td>
+      <td>3.37</td>
+      <td>3.28</td>
+      <td>39.0</td>
+      <td>42.0</td>
+      <td>3.13</td>
+      <td>2.65</td>
+      <td>58.0</td>
+      <td>59.0</td>
+      <td>0.52</td>
+      <td>0.12</td>
+      <td>25.0</td>
+      <td>12.0</td>
+      <td>71.0</td>
+      <td>60.0</td>
+      <td>1.0</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>608</th>
       <td>793432d042384a02</td>
       <td>52cae54377b433b7</td>
       <td>1652f3213655b935</td>
@@ -1733,118 +1654,44 @@ dataframe.loc[dataframe['fighter_a_stance'] == 'Open Stance']
       <td>2.0</td>
     </tr>
     <tr>
-      <th>5321</th>
-      <td>b46679306287ea79</td>
+      <th>1990</th>
+      <td>516868e246064e2b</td>
       <td>52cae54377b433b7</td>
-      <td>f341f9551ba744e2</td>
-      <td>Fighter A</td>
-      <td>UFC Fight Night: Thomas vs Florian</td>
-      <td>2007-09-19</td>
+      <td>3ed134d85dfbd7b4</td>
+      <td>Fighter B</td>
+      <td>UFC Fight Night: Florian vs Gomi</td>
+      <td>2010-03-31</td>
       <td>Nate Quarry</td>
-      <td>Pete Sell</td>
+      <td>Jorge Rivera</td>
       <td>72.0</td>
-      <td>71.0</td>
+      <td>73.0</td>
       <td>185.0</td>
-      <td>170.0</td>
+      <td>185.0</td>
       <td>72.0</td>
-      <td>75.0</td>
+      <td>73.0</td>
       <td>Open Stance</td>
       <td>Orthodox</td>
       <td>1972-03-18</td>
-      <td>1982-08-05</td>
+      <td>1972-02-28</td>
       <td>4.96</td>
-      <td>2.60</td>
-      <td>44.0</td>
-      <td>42.0</td>
-      <td>2.80</td>
-      <td>3.65</td>
-      <td>66.0</td>
-      <td>51.0</td>
-      <td>0.25</td>
-      <td>0.91</td>
-      <td>33.0</td>
-      <td>21.0</td>
-      <td>60.0</td>
-      <td>47.0</td>
-      <td>0.0</td>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>5362</th>
-      <td>b589aba75770bc6b</td>
-      <td>52cae54377b433b7</td>
-      <td>a8ea84cbe1655f0a</td>
-      <td>Fighter A</td>
-      <td>UFC Fight Night: Diaz vs Guillard</td>
-      <td>2009-09-16</td>
-      <td>Nate Quarry</td>
-      <td>Tim Credeur</td>
-      <td>72.0</td>
-      <td>75.0</td>
-      <td>185.0</td>
-      <td>185.0</td>
-      <td>72.0</td>
-      <td>75.0</td>
-      <td>Open Stance</td>
-      <td>Orthodox</td>
-      <td>1972-03-18</td>
-      <td>1977-07-09</td>
-      <td>4.96</td>
-      <td>3.59</td>
-      <td>44.0</td>
-      <td>30.0</td>
-      <td>2.80</td>
-      <td>3.13</td>
-      <td>66.0</td>
-      <td>57.0</td>
-      <td>0.25</td>
-      <td>0.41</td>
-      <td>33.0</td>
-      <td>100.0</td>
-      <td>60.0</td>
-      <td>50.0</td>
-      <td>0.0</td>
-      <td>3.3</td>
-    </tr>
-    <tr>
-      <th>5388</th>
-      <td>b675c94f20551631</td>
-      <td>52cae54377b433b7</td>
-      <td>ad047e3073a775f3</td>
-      <td>Fighter A</td>
-      <td>UFC 83: Serra vs St-Pierre 2</td>
-      <td>2008-04-19</td>
-      <td>Nate Quarry</td>
-      <td>Kalib Starnes</td>
-      <td>72.0</td>
-      <td>75.0</td>
-      <td>185.0</td>
-      <td>185.0</td>
-      <td>72.0</td>
-      <td>74.0</td>
-      <td>Open Stance</td>
-      <td>Orthodox</td>
-      <td>1972-03-18</td>
-      <td>1975-01-06</td>
-      <td>4.96</td>
-      <td>2.71</td>
+      <td>3.16</td>
       <td>44.0</td>
       <td>48.0</td>
       <td>2.80</td>
-      <td>4.43</td>
+      <td>2.64</td>
       <td>66.0</td>
-      <td>53.0</td>
+      <td>54.0</td>
       <td>0.25</td>
-      <td>1.46</td>
+      <td>0.84</td>
       <td>33.0</td>
-      <td>33.0</td>
+      <td>50.0</td>
       <td>60.0</td>
-      <td>25.0</td>
+      <td>63.0</td>
       <td>0.0</td>
-      <td>0.6</td>
+      <td>0.1</td>
     </tr>
     <tr>
-      <th>5633</th>
+      <th>2003</th>
       <td>bf1525f9761a116e</td>
       <td>52cae54377b433b7</td>
       <td>3f24c96753dbd9f9</td>
@@ -1881,81 +1728,44 @@ dataframe.loc[dataframe['fighter_a_stance'] == 'Open Stance']
       <td>0.9</td>
     </tr>
     <tr>
-      <th>5981</th>
-      <td>ca3230227ee700b7</td>
-      <td>52cae54377b433b7</td>
-      <td>d3711d3784b76255</td>
-      <td>Fighter A</td>
-      <td>UFC 53: Heavy Hitters</td>
-      <td>2005-06-04</td>
-      <td>Nate Quarry</td>
-      <td>Shonie Carter</td>
-      <td>72.0</td>
-      <td>70.0</td>
-      <td>185.0</td>
-      <td>170.0</td>
-      <td>72.0</td>
-      <td>NaN</td>
-      <td>Open Stance</td>
-      <td>Southpaw</td>
-      <td>1972-03-18</td>
-      <td>1972-05-03</td>
-      <td>4.96</td>
-      <td>1.62</td>
-      <td>44.0</td>
-      <td>36.0</td>
-      <td>2.80</td>
-      <td>2.32</td>
-      <td>66.0</td>
-      <td>47.0</td>
-      <td>0.25</td>
-      <td>0.75</td>
-      <td>33.0</td>
-      <td>66.0</td>
-      <td>60.0</td>
-      <td>75.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>6493</th>
-      <td>dd400f38c483f629</td>
+      <th>2383</th>
+      <td>0ea087a71863184d</td>
       <td>59583ff832fe9d68</td>
-      <td>c4b6099f0d25f75e</td>
+      <td>49efbdc6c9f650c4</td>
       <td>Fighter A</td>
-      <td>UFC 98: Evans vs Machida</td>
-      <td>2009-05-23</td>
+      <td>UFC 110: Nogueira vs Velasquez</td>
+      <td>2010-02-20</td>
       <td>Krzysztof Soszynski</td>
-      <td>Andre Gusmao</td>
+      <td>Stephan Bonnar</td>
       <td>73.0</td>
-      <td>72.0</td>
+      <td>76.0</td>
       <td>205.0</td>
       <td>205.0</td>
       <td>77.0</td>
-      <td>NaN</td>
+      <td>79.0</td>
       <td>Open Stance</td>
       <td>Orthodox</td>
       <td>1977-08-02</td>
-      <td>1977-05-19</td>
+      <td>1977-04-04</td>
       <td>3.37</td>
-      <td>2.79</td>
+      <td>2.76</td>
       <td>39.0</td>
-      <td>43.0</td>
+      <td>38.0</td>
       <td>3.13</td>
-      <td>3.28</td>
+      <td>3.01</td>
       <td>58.0</td>
-      <td>60.0</td>
+      <td>52.0</td>
       <td>0.52</td>
-      <td>0.00</td>
+      <td>1.32</td>
       <td>25.0</td>
-      <td>0.0</td>
+      <td>40.0</td>
       <td>71.0</td>
       <td>60.0</td>
       <td>1.0</td>
-      <td>0.0</td>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>6577</th>
+      <th>3342</th>
       <td>e03ec6b24fca2386</td>
       <td>59583ff832fe9d68</td>
       <td>6d7886b094b471ac</td>
@@ -1992,7 +1802,155 @@ dataframe.loc[dataframe['fighter_a_stance'] == 'Open Stance']
       <td>0.2</td>
     </tr>
     <tr>
-      <th>7001</th>
+      <th>5006</th>
+      <td>b589aba75770bc6b</td>
+      <td>52cae54377b433b7</td>
+      <td>a8ea84cbe1655f0a</td>
+      <td>Fighter A</td>
+      <td>UFC Fight Night: Diaz vs Guillard</td>
+      <td>2009-09-16</td>
+      <td>Nate Quarry</td>
+      <td>Tim Credeur</td>
+      <td>72.0</td>
+      <td>75.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>72.0</td>
+      <td>75.0</td>
+      <td>Open Stance</td>
+      <td>Orthodox</td>
+      <td>1972-03-18</td>
+      <td>1977-07-09</td>
+      <td>4.96</td>
+      <td>3.59</td>
+      <td>44.0</td>
+      <td>30.0</td>
+      <td>2.80</td>
+      <td>3.13</td>
+      <td>66.0</td>
+      <td>57.0</td>
+      <td>0.25</td>
+      <td>0.41</td>
+      <td>33.0</td>
+      <td>100.0</td>
+      <td>60.0</td>
+      <td>50.0</td>
+      <td>0.0</td>
+      <td>3.3</td>
+    </tr>
+    <tr>
+      <th>5163</th>
+      <td>b675c94f20551631</td>
+      <td>52cae54377b433b7</td>
+      <td>ad047e3073a775f3</td>
+      <td>Fighter A</td>
+      <td>UFC 83: Serra vs St-Pierre 2</td>
+      <td>2008-04-19</td>
+      <td>Nate Quarry</td>
+      <td>Kalib Starnes</td>
+      <td>72.0</td>
+      <td>75.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>72.0</td>
+      <td>74.0</td>
+      <td>Open Stance</td>
+      <td>Orthodox</td>
+      <td>1972-03-18</td>
+      <td>1975-01-06</td>
+      <td>4.96</td>
+      <td>2.71</td>
+      <td>44.0</td>
+      <td>48.0</td>
+      <td>2.80</td>
+      <td>4.43</td>
+      <td>66.0</td>
+      <td>53.0</td>
+      <td>0.25</td>
+      <td>1.46</td>
+      <td>33.0</td>
+      <td>33.0</td>
+      <td>60.0</td>
+      <td>25.0</td>
+      <td>0.0</td>
+      <td>0.6</td>
+    </tr>
+    <tr>
+      <th>5821</th>
+      <td>dd400f38c483f629</td>
+      <td>59583ff832fe9d68</td>
+      <td>c4b6099f0d25f75e</td>
+      <td>Fighter A</td>
+      <td>UFC 98: Evans vs Machida</td>
+      <td>2009-05-23</td>
+      <td>Krzysztof Soszynski</td>
+      <td>Andre Gusmao</td>
+      <td>73.0</td>
+      <td>72.0</td>
+      <td>205.0</td>
+      <td>205.0</td>
+      <td>77.0</td>
+      <td>NaN</td>
+      <td>Open Stance</td>
+      <td>Orthodox</td>
+      <td>1977-08-02</td>
+      <td>1977-05-19</td>
+      <td>3.37</td>
+      <td>2.79</td>
+      <td>39.0</td>
+      <td>43.0</td>
+      <td>3.13</td>
+      <td>3.28</td>
+      <td>58.0</td>
+      <td>60.0</td>
+      <td>0.52</td>
+      <td>0.00</td>
+      <td>25.0</td>
+      <td>0.0</td>
+      <td>71.0</td>
+      <td>60.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>6303</th>
+      <td>ca3230227ee700b7</td>
+      <td>52cae54377b433b7</td>
+      <td>d3711d3784b76255</td>
+      <td>Fighter A</td>
+      <td>UFC 53: Heavy Hitters</td>
+      <td>2005-06-04</td>
+      <td>Nate Quarry</td>
+      <td>Shonie Carter</td>
+      <td>72.0</td>
+      <td>70.0</td>
+      <td>185.0</td>
+      <td>170.0</td>
+      <td>72.0</td>
+      <td>NaN</td>
+      <td>Open Stance</td>
+      <td>Southpaw</td>
+      <td>1972-03-18</td>
+      <td>1972-05-03</td>
+      <td>4.96</td>
+      <td>1.62</td>
+      <td>44.0</td>
+      <td>36.0</td>
+      <td>2.80</td>
+      <td>2.32</td>
+      <td>66.0</td>
+      <td>47.0</td>
+      <td>0.25</td>
+      <td>0.75</td>
+      <td>33.0</td>
+      <td>66.0</td>
+      <td>60.0</td>
+      <td>75.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>7015</th>
       <td>edeba52fc9b2855f</td>
       <td>59583ff832fe9d68</td>
       <td>ea398c802d9998ee</td>
@@ -2029,7 +1987,44 @@ dataframe.loc[dataframe['fighter_a_stance'] == 'Open Stance']
       <td>0.0</td>
     </tr>
     <tr>
-      <th>7181</th>
+      <th>7245</th>
+      <td>b46679306287ea79</td>
+      <td>52cae54377b433b7</td>
+      <td>f341f9551ba744e2</td>
+      <td>Fighter A</td>
+      <td>UFC Fight Night: Thomas vs Florian</td>
+      <td>2007-09-19</td>
+      <td>Nate Quarry</td>
+      <td>Pete Sell</td>
+      <td>72.0</td>
+      <td>71.0</td>
+      <td>185.0</td>
+      <td>170.0</td>
+      <td>72.0</td>
+      <td>75.0</td>
+      <td>Open Stance</td>
+      <td>Orthodox</td>
+      <td>1972-03-18</td>
+      <td>1982-08-05</td>
+      <td>4.96</td>
+      <td>2.60</td>
+      <td>44.0</td>
+      <td>42.0</td>
+      <td>2.80</td>
+      <td>3.65</td>
+      <td>66.0</td>
+      <td>51.0</td>
+      <td>0.25</td>
+      <td>0.91</td>
+      <td>33.0</td>
+      <td>21.0</td>
+      <td>60.0</td>
+      <td>47.0</td>
+      <td>0.0</td>
+      <td>0.9</td>
+    </tr>
+    <tr>
+      <th>7423</th>
       <td>f434775e97920d95</td>
       <td>52cae54377b433b7</td>
       <td>fbbde91f7bc2d3c5</td>
@@ -2177,187 +2172,187 @@ dataframe
   <tbody>
     <tr>
       <th>0</th>
-      <td>0005e00b07cee542</td>
-      <td>634e2fb70bde3fd5</td>
-      <td>805ad1801eb26abb</td>
-      <td>1</td>
-      <td>UFC Fight Night: Holm vs. Aldana</td>
-      <td>2020-10-03</td>
-      <td>Holly Holm</td>
-      <td>Irene Aldana</td>
-      <td>68.0</td>
-      <td>69.0</td>
-      <td>135.0</td>
-      <td>135.0</td>
-      <td>69.0</td>
-      <td>68.0</td>
-      <td>Southpaw</td>
+      <td>1a191251620a84ca</td>
+      <td>77d7295d1b22c694</td>
+      <td>00a905a4a4a2b071</td>
+      <td>2</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>Alessio Di Chirico</td>
+      <td>Roman Kopylov</td>
+      <td>72.0</td>
+      <td>72.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>74.0</td>
+      <td>75.0</td>
       <td>Orthodox</td>
-      <td>1981-10-17</td>
-      <td>1988-03-26</td>
-      <td>3.21</td>
-      <td>5.24</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>2.79</td>
-      <td>6.33</td>
-      <td>56.0</td>
-      <td>57.0</td>
-      <td>0.90</td>
-      <td>0.16</td>
-      <td>30.0</td>
+      <td>Southpaw</td>
+      <td>1989-12-12</td>
+      <td>1991-05-04</td>
+      <td>3.32</td>
+      <td>4.72</td>
+      <td>39.0</td>
+      <td>53.0</td>
+      <td>3.44</td>
+      <td>4.11</td>
+      <td>61.0</td>
+      <td>60.0</td>
+      <td>1.46</td>
+      <td>0.47</td>
+      <td>39.0</td>
       <td>50.0</td>
-      <td>78.0</td>
-      <td>76.0</td>
-      <td>0.1</td>
-      <td>0.2</td>
+      <td>83.0</td>
+      <td>92.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>000da3152b7b5ab1</td>
-      <td>6da99156486ed6c2</td>
-      <td>f70144caea5c4c80</td>
+      <td>20f316f96c9e4458</td>
+      <td>881bf86d4cba8578</td>
+      <td>00a905a4a4a2b071</td>
       <td>1</td>
-      <td>UFC 61: Bitter Rivals</td>
-      <td>2006-07-08</td>
-      <td>Joshua Burkman</td>
-      <td>Josh Neer</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>Nassourdine Imavov</td>
+      <td>Joaquin Buckley</td>
+      <td>75.0</td>
       <td>70.0</td>
-      <td>71.0</td>
+      <td>185.0</td>
       <td>170.0</td>
-      <td>170.0</td>
-      <td>72.0</td>
-      <td>72.0</td>
+      <td>75.0</td>
+      <td>76.0</td>
       <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1980-04-10</td>
-      <td>1983-03-24</td>
-      <td>2.69</td>
-      <td>3.29</td>
-      <td>43.0</td>
-      <td>46.0</td>
-      <td>3.13</td>
-      <td>3.63</td>
-      <td>51.0</td>
-      <td>58.0</td>
-      <td>2.53</td>
-      <td>1.09</td>
+      <td>Southpaw</td>
+      <td>1995-03-01</td>
+      <td>1994-04-27</td>
+      <td>4.53</td>
+      <td>3.87</td>
+      <td>54.0</td>
+      <td>33.0</td>
+      <td>3.26</td>
+      <td>3.31</td>
+      <td>61.0</td>
+      <td>57.0</td>
+      <td>0.87</td>
+      <td>1.51</td>
+      <td>31.0</td>
       <td>36.0</td>
-      <td>34.0</td>
-      <td>72.0</td>
-      <td>46.0</td>
-      <td>0.3</td>
-      <td>1.3</td>
+      <td>76.0</td>
+      <td>65.0</td>
+      <td>1.5</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>001441f70c293931</td>
-      <td>7826923b47f8d72a</td>
-      <td>1d00756835ca67c9</td>
+      <td>398db40015b3c81c</td>
+      <td>e1d40e8782d80bc2</td>
+      <td>00a905a4a4a2b071</td>
       <td>1</td>
-      <td>UFC Fight Night: Volkov vs. Aspinall</td>
-      <td>2022-03-19</td>
-      <td>Paddy Pimblett</td>
-      <td>Kazula Vargas</td>
-      <td>70.0</td>
-      <td>68.0</td>
-      <td>155.0</td>
-      <td>155.0</td>
-      <td>73.0</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>William Gomis</td>
+      <td>Jarno Errens</td>
+      <td>72.0</td>
       <td>71.0</td>
-      <td>Orthodox</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>73.0</td>
       <td>Southpaw</td>
-      <td>1995-01-03</td>
-      <td>1985-08-15</td>
-      <td>5.13</td>
-      <td>3.65</td>
+      <td>Orthodox</td>
+      <td>1997-06-13</td>
+      <td>1994-11-17</td>
+      <td>2.62</td>
+      <td>1.67</td>
+      <td>46.0</td>
+      <td>38.0</td>
+      <td>1.49</td>
+      <td>2.93</td>
+      <td>75.0</td>
       <td>52.0</td>
-      <td>53.0</td>
-      <td>3.70</td>
-      <td>1.77</td>
-      <td>41.0</td>
-      <td>57.0</td>
-      <td>0.98</td>
-      <td>0.40</td>
-      <td>25.0</td>
-      <td>25.0</td>
-      <td>56.0</td>
-      <td>30.0</td>
-      <td>1.6</td>
-      <td>0.4</td>
+      <td>1.06</td>
+      <td>0.00</td>
+      <td>60.0</td>
+      <td>0.0</td>
+      <td>81.0</td>
+      <td>33.0</td>
+      <td>0.7</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0019ec81fd706ade</td>
-      <td>85073dbd1be65ed9</td>
-      <td>3ae10ac4df3df05c</td>
-      <td>3</td>
-      <td>UFC Fight Night: Reyes vs. Weidman</td>
-      <td>2019-10-18</td>
-      <td>Greg Hardy</td>
-      <td>Ben Sosoli</td>
-      <td>77.0</td>
-      <td>72.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>80.0</td>
-      <td>72.0</td>
-      <td>Orthodox</td>
+      <td>3e2f00991f511607</td>
+      <td>c2299ec916bc7c56</td>
+      <td>00a905a4a4a2b071</td>
+      <td>1</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>Benoit Saint Denis</td>
+      <td>Gabriel Miranda</td>
+      <td>71.0</td>
+      <td>71.0</td>
+      <td>155.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>71.0</td>
       <td>Southpaw</td>
-      <td>1988-07-28</td>
-      <td>1989-12-10</td>
-      <td>4.79</td>
-      <td>2.31</td>
-      <td>50.0</td>
-      <td>31.0</td>
-      <td>3.31</td>
-      <td>4.30</td>
-      <td>55.0</td>
-      <td>47.0</td>
-      <td>0.20</td>
-      <td>0.00</td>
-      <td>33.0</td>
+      <td>Orthodox</td>
+      <td>1995-12-18</td>
+      <td>1990-03-25</td>
+      <td>5.53</td>
+      <td>3.52</td>
+      <td>52.0</td>
+      <td>51.0</td>
+      <td>5.20</td>
+      <td>6.88</td>
+      <td>44.0</td>
+      <td>39.0</td>
+      <td>4.55</td>
+      <td>4.80</td>
+      <td>36.0</td>
+      <td>40.0</td>
+      <td>66.0</td>
       <td>0.0</td>
-      <td>64.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>1.4</td>
+      <td>2.4</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0027e179b743c86c</td>
-      <td>91ea901c458e95dd</td>
-      <td>f54200f1dfb9b5d4</td>
-      <td>1</td>
-      <td>UFC 185: Pettis vs Dos Anjos</td>
-      <td>2015-03-14</td>
-      <td>Jared Rosholt</td>
-      <td>Josh Copeland</td>
-      <td>74.0</td>
-      <td>73.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>75.0</td>
-      <td>NaN</td>
+      <td>7bced112f3229b1b</td>
+      <td>c21a036b4e012f1c</td>
+      <td>00a905a4a4a2b071</td>
+      <td>2</td>
+      <td>UFC Fight Night: Gane vs. Tuivasa</td>
+      <td>2022-09-03</td>
+      <td>John Makdessi</td>
+      <td>Nasrat Haqparast</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>155.0</td>
+      <td>155.0</td>
+      <td>68.0</td>
+      <td>72.0</td>
       <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1986-08-04</td>
-      <td>1982-10-20</td>
-      <td>2.08</td>
-      <td>1.03</td>
-      <td>46.0</td>
-      <td>31.0</td>
-      <td>1.52</td>
-      <td>3.01</td>
-      <td>59.0</td>
-      <td>55.0</td>
-      <td>1.83</td>
+      <td>Southpaw</td>
+      <td>1985-05-03</td>
+      <td>1995-08-22</td>
+      <td>5.52</td>
+      <td>5.78</td>
+      <td>49.0</td>
+      <td>44.0</td>
+      <td>4.15</td>
+      <td>5.25</td>
+      <td>68.0</td>
+      <td>64.0</td>
       <td>0.00</td>
-      <td>41.0</td>
+      <td>0.31</td>
       <td>0.0</td>
-      <td>66.0</td>
-      <td>57.0</td>
-      <td>0.1</td>
+      <td>20.0</td>
+      <td>86.0</td>
+      <td>78.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2399,188 +2394,188 @@ dataframe
     </tr>
     <tr>
       <th>7514</th>
-      <td>ffe4379d6bd1e82b</td>
-      <td>2a542ee8a8b83559</td>
-      <td>0cf935519d439ba6</td>
+      <td>79817ab0129c5598</td>
+      <td>634bb0de2eb043b4</td>
+      <td>ff9578cdbfabd323</td>
       <td>1</td>
-      <td>UFC 39: The Warriors Return</td>
-      <td>2002-09-27</td>
-      <td>Tim Sylvia</td>
-      <td>Wesley Correira</td>
-      <td>80.0</td>
-      <td>75.0</td>
-      <td>265.0</td>
-      <td>260.0</td>
-      <td>80.0</td>
-      <td>NaN</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Cristiane Justino</td>
+      <td>Tonya Evinger</td>
+      <td>68.0</td>
+      <td>67.0</td>
+      <td>145.0</td>
+      <td>135.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
       <td>Orthodox</td>
       <td>Orthodox</td>
-      <td>1976-03-05</td>
-      <td>1978-11-11</td>
-      <td>4.23</td>
-      <td>2.60</td>
-      <td>41.0</td>
-      <td>36.0</td>
-      <td>2.61</td>
-      <td>8.80</td>
-      <td>61.0</td>
-      <td>40.0</td>
-      <td>0.11</td>
-      <td>0.00</td>
-      <td>100.0</td>
-      <td>0.0</td>
-      <td>75.0</td>
-      <td>90.0</td>
-      <td>0.1</td>
-      <td>0.0</td>
+      <td>1985-07-09</td>
+      <td>1981-06-04</td>
+      <td>7.28</td>
+      <td>1.16</td>
+      <td>52.0</td>
+      <td>42.0</td>
+      <td>2.25</td>
+      <td>4.02</td>
+      <td>64.0</td>
+      <td>38.0</td>
+      <td>0.66</td>
+      <td>0.93</td>
+      <td>55.0</td>
+      <td>30.0</td>
+      <td>94.0</td>
+      <td>33.0</td>
+      <td>0.4</td>
+      <td>0.9</td>
     </tr>
     <tr>
       <th>7515</th>
-      <td>ffe629a5232a878b</td>
-      <td>08ae5cd9aef7ddd3</td>
-      <td>108afe61a26bcbf4</td>
+      <td>ac9e19a4075f6557</td>
+      <td>cb696ebfb6598724</td>
+      <td>ff9578cdbfabd323</td>
       <td>1</td>
-      <td>UFC 43: Meltdown</td>
-      <td>2003-06-06</td>
-      <td>Kimo Leopoldo</td>
-      <td>David Abbott</td>
-      <td>75.0</td>
-      <td>72.0</td>
-      <td>235.0</td>
-      <td>265.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Orthodox</td>
-      <td>Switch</td>
-      <td>1968-01-05</td>
-      <td>None</td>
-      <td>0.76</td>
-      <td>1.35</td>
-      <td>83.0</td>
-      <td>30.0</td>
-      <td>2.12</td>
-      <td>3.55</td>
-      <td>30.0</td>
-      <td>38.0</td>
-      <td>4.55</td>
-      <td>1.07</td>
-      <td>100.0</td>
-      <td>33.0</td>
-      <td>0.0</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Aljamain Sterling</td>
+      <td>Renan Barao</td>
+      <td>67.0</td>
       <td>66.0</td>
-      <td>2.3</td>
-      <td>0.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>70.0</td>
+      <td>Orthodox</td>
+      <td>Orthodox</td>
+      <td>1989-07-31</td>
+      <td>1987-01-31</td>
+      <td>4.73</td>
+      <td>3.78</td>
+      <td>52.0</td>
+      <td>36.0</td>
+      <td>2.41</td>
+      <td>3.90</td>
+      <td>58.0</td>
+      <td>57.0</td>
+      <td>1.97</td>
+      <td>1.49</td>
+      <td>24.0</td>
+      <td>41.0</td>
+      <td>45.0</td>
+      <td>91.0</td>
+      <td>0.8</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>7516</th>
-      <td>ffea776913451b6d</td>
-      <td>22a92d7f62195791</td>
-      <td>ad4e9055bf8cd04d</td>
+      <td>b8c967c742d3c107</td>
+      <td>f2925e6db404bf1d</td>
+      <td>ff9578cdbfabd323</td>
       <td>1</td>
-      <td>UFC 184: Rousey vs Zingano</td>
-      <td>2015-02-28</td>
-      <td>Tony Ferguson</td>
-      <td>Gleison Tibau</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Robbie Lawler</td>
+      <td>Donald Cerrone</td>
       <td>71.0</td>
-      <td>70.0</td>
+      <td>73.0</td>
+      <td>170.0</td>
       <td>155.0</td>
-      <td>155.0</td>
-      <td>76.0</td>
-      <td>71.0</td>
-      <td>Orthodox</td>
+      <td>74.0</td>
+      <td>73.0</td>
       <td>Southpaw</td>
-      <td>1984-02-12</td>
-      <td>1983-10-07</td>
-      <td>4.94</td>
-      <td>1.95</td>
-      <td>45.0</td>
-      <td>31.0</td>
+      <td>Orthodox</td>
+      <td>1982-03-20</td>
+      <td>1983-03-29</td>
+      <td>3.85</td>
       <td>4.41</td>
-      <td>2.51</td>
-      <td>55.0</td>
-      <td>63.0</td>
-      <td>0.39</td>
-      <td>4.08</td>
-      <td>35.0</td>
-      <td>53.0</td>
-      <td>67.0</td>
-      <td>92.0</td>
-      <td>0.9</td>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>7517</th>
-      <td>fffa21388cdd78b7</td>
-      <td>c80095f6092271a7</td>
-      <td>eae4aec1a5a8ff01</td>
-      <td>1</td>
-      <td>UFC 166: Velasquez vs Dos Santos 3</td>
-      <td>2013-10-19</td>
-      <td>Tim Boetsch</td>
-      <td>CB Dollaway</td>
-      <td>72.0</td>
-      <td>74.0</td>
-      <td>185.0</td>
-      <td>185.0</td>
-      <td>74.0</td>
-      <td>76.0</td>
-      <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1981-01-28</td>
-      <td>1983-08-10</td>
-      <td>2.93</td>
-      <td>2.65</td>
-      <td>50.0</td>
       <td>47.0</td>
-      <td>2.90</td>
-      <td>2.58</td>
-      <td>57.0</td>
-      <td>54.0</td>
-      <td>1.45</td>
-      <td>3.55</td>
-      <td>34.0</td>
-      <td>54.0</td>
+      <td>46.0</td>
+      <td>4.67</td>
+      <td>4.48</td>
       <td>59.0</td>
-      <td>62.0</td>
-      <td>0.8</td>
+      <td>53.0</td>
+      <td>0.65</td>
+      <td>1.16</td>
+      <td>64.0</td>
+      <td>33.0</td>
+      <td>65.0</td>
+      <td>73.0</td>
+      <td>0.0</td>
       <td>1.2</td>
     </tr>
     <tr>
-      <th>7518</th>
-      <td>fffdc57255274be1</td>
-      <td>2f5cbecbbe18bac4</td>
-      <td>5717efc6f271cd52</td>
-      <td>2</td>
-      <td>UFC 283: Teixeira vs. Hill</td>
-      <td>2023-01-21</td>
-      <td>Shamil Abdurakhimov</td>
-      <td>Jailton Almeida</td>
-      <td>75.0</td>
-      <td>75.0</td>
-      <td>235.0</td>
-      <td>205.0</td>
-      <td>76.0</td>
-      <td>79.0</td>
+      <th>7517</th>
+      <td>dffad417175400ba</td>
+      <td>3974fa35c917af1d</td>
+      <td>ff9578cdbfabd323</td>
+      <td>1</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Ricardo Lamas</td>
+      <td>Jason Knight</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>71.0</td>
       <td>Orthodox</td>
       <td>Orthodox</td>
-      <td>1981-09-02</td>
-      <td>1991-06-26</td>
-      <td>2.41</td>
-      <td>2.78</td>
-      <td>44.0</td>
-      <td>64.0</td>
+      <td>1982-05-21</td>
+      <td>1992-07-14</td>
+      <td>3.13</td>
+      <td>2.95</td>
+      <td>47.0</td>
+      <td>33.0</td>
+      <td>2.87</td>
       <td>3.02</td>
-      <td>0.52</td>
-      <td>55.0</td>
+      <td>57.0</td>
+      <td>51.0</td>
+      <td>1.84</td>
+      <td>1.31</td>
+      <td>33.0</td>
+      <td>31.0</td>
+      <td>46.0</td>
+      <td>47.0</td>
+      <td>0.9</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <th>7518</th>
+      <td>e80a8338d86e730b</td>
+      <td>05b43e0ead3df345</td>
+      <td>ff9578cdbfabd323</td>
+      <td>2</td>
+      <td>UFC 214: Cormier vs. Jones 2</td>
+      <td>2017-07-29</td>
+      <td>Kailin Curran</td>
+      <td>Aleksandra Albu</td>
+      <td>64.0</td>
+      <td>62.0</td>
+      <td>115.0</td>
+      <td>115.0</td>
+      <td>65.0</td>
+      <td>63.0</td>
+      <td>Orthodox</td>
+      <td>Orthodox</td>
+      <td>1991-04-11</td>
+      <td>1990-07-14</td>
+      <td>3.89</td>
+      <td>4.83</td>
       <td>43.0</td>
-      <td>1.01</td>
-      <td>5.14</td>
-      <td>23.0</td>
-      <td>55.0</td>
-      <td>45.0</td>
-      <td>75.0</td>
-      <td>0.1</td>
-      <td>2.4</td>
+      <td>47.0</td>
+      <td>4.75</td>
+      <td>5.56</td>
+      <td>53.0</td>
+      <td>38.0</td>
+      <td>2.00</td>
+      <td>2.27</td>
+      <td>57.0</td>
+      <td>50.0</td>
+      <td>61.0</td>
+      <td>77.0</td>
+      <td>0.6</td>
+      <td>0.4</td>
     </tr>
   </tbody>
 </table>
@@ -2652,152 +2647,152 @@ dataframe
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>68.0</td>
-      <td>69.0</td>
-      <td>135.0</td>
-      <td>135.0</td>
-      <td>69.0</td>
-      <td>68.0</td>
-      <td>Southpaw</td>
+      <td>2</td>
+      <td>72.0</td>
+      <td>72.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>74.0</td>
+      <td>75.0</td>
       <td>Orthodox</td>
-      <td>1981-10-17</td>
-      <td>1988-03-26</td>
-      <td>3.21</td>
-      <td>5.24</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>2.79</td>
-      <td>6.33</td>
-      <td>56.0</td>
-      <td>57.0</td>
-      <td>0.90</td>
-      <td>0.16</td>
-      <td>30.0</td>
+      <td>Southpaw</td>
+      <td>1989-12-12</td>
+      <td>1991-05-04</td>
+      <td>3.32</td>
+      <td>4.72</td>
+      <td>39.0</td>
+      <td>53.0</td>
+      <td>3.44</td>
+      <td>4.11</td>
+      <td>61.0</td>
+      <td>60.0</td>
+      <td>1.46</td>
+      <td>0.47</td>
+      <td>39.0</td>
       <td>50.0</td>
-      <td>78.0</td>
-      <td>76.0</td>
-      <td>0.1</td>
-      <td>0.2</td>
+      <td>83.0</td>
+      <td>92.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
+      <td>75.0</td>
       <td>70.0</td>
-      <td>71.0</td>
+      <td>185.0</td>
       <td>170.0</td>
-      <td>170.0</td>
-      <td>72.0</td>
-      <td>72.0</td>
+      <td>75.0</td>
+      <td>76.0</td>
       <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1980-04-10</td>
-      <td>1983-03-24</td>
-      <td>2.69</td>
-      <td>3.29</td>
-      <td>43.0</td>
-      <td>46.0</td>
-      <td>3.13</td>
-      <td>3.63</td>
-      <td>51.0</td>
-      <td>58.0</td>
-      <td>2.53</td>
-      <td>1.09</td>
+      <td>Southpaw</td>
+      <td>1995-03-01</td>
+      <td>1994-04-27</td>
+      <td>4.53</td>
+      <td>3.87</td>
+      <td>54.0</td>
+      <td>33.0</td>
+      <td>3.26</td>
+      <td>3.31</td>
+      <td>61.0</td>
+      <td>57.0</td>
+      <td>0.87</td>
+      <td>1.51</td>
+      <td>31.0</td>
       <td>36.0</td>
-      <td>34.0</td>
-      <td>72.0</td>
-      <td>46.0</td>
-      <td>0.3</td>
-      <td>1.3</td>
+      <td>76.0</td>
+      <td>65.0</td>
+      <td>1.5</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1</td>
-      <td>70.0</td>
-      <td>68.0</td>
-      <td>155.0</td>
-      <td>155.0</td>
-      <td>73.0</td>
+      <td>72.0</td>
       <td>71.0</td>
-      <td>Orthodox</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>73.0</td>
       <td>Southpaw</td>
-      <td>1995-01-03</td>
-      <td>1985-08-15</td>
-      <td>5.13</td>
-      <td>3.65</td>
+      <td>Orthodox</td>
+      <td>1997-06-13</td>
+      <td>1994-11-17</td>
+      <td>2.62</td>
+      <td>1.67</td>
+      <td>46.0</td>
+      <td>38.0</td>
+      <td>1.49</td>
+      <td>2.93</td>
+      <td>75.0</td>
       <td>52.0</td>
-      <td>53.0</td>
-      <td>3.70</td>
-      <td>1.77</td>
-      <td>41.0</td>
-      <td>57.0</td>
-      <td>0.98</td>
-      <td>0.40</td>
-      <td>25.0</td>
-      <td>25.0</td>
-      <td>56.0</td>
-      <td>30.0</td>
-      <td>1.6</td>
-      <td>0.4</td>
+      <td>1.06</td>
+      <td>0.00</td>
+      <td>60.0</td>
+      <td>0.0</td>
+      <td>81.0</td>
+      <td>33.0</td>
+      <td>0.7</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
-      <td>77.0</td>
-      <td>72.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>80.0</td>
-      <td>72.0</td>
-      <td>Orthodox</td>
+      <td>1</td>
+      <td>71.0</td>
+      <td>71.0</td>
+      <td>155.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>71.0</td>
       <td>Southpaw</td>
-      <td>1988-07-28</td>
-      <td>1989-12-10</td>
-      <td>4.79</td>
-      <td>2.31</td>
-      <td>50.0</td>
-      <td>31.0</td>
-      <td>3.31</td>
-      <td>4.30</td>
-      <td>55.0</td>
-      <td>47.0</td>
-      <td>0.20</td>
-      <td>0.00</td>
-      <td>33.0</td>
+      <td>Orthodox</td>
+      <td>1995-12-18</td>
+      <td>1990-03-25</td>
+      <td>5.53</td>
+      <td>3.52</td>
+      <td>52.0</td>
+      <td>51.0</td>
+      <td>5.20</td>
+      <td>6.88</td>
+      <td>44.0</td>
+      <td>39.0</td>
+      <td>4.55</td>
+      <td>4.80</td>
+      <td>36.0</td>
+      <td>40.0</td>
+      <td>66.0</td>
       <td>0.0</td>
-      <td>64.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>1.4</td>
+      <td>2.4</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
-      <td>74.0</td>
-      <td>73.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>75.0</td>
-      <td>NaN</td>
+      <td>2</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>155.0</td>
+      <td>155.0</td>
+      <td>68.0</td>
+      <td>72.0</td>
       <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1986-08-04</td>
-      <td>1982-10-20</td>
-      <td>2.08</td>
-      <td>1.03</td>
-      <td>46.0</td>
-      <td>31.0</td>
-      <td>1.52</td>
-      <td>3.01</td>
-      <td>59.0</td>
-      <td>55.0</td>
-      <td>1.83</td>
+      <td>Southpaw</td>
+      <td>1985-05-03</td>
+      <td>1995-08-22</td>
+      <td>5.52</td>
+      <td>5.78</td>
+      <td>49.0</td>
+      <td>44.0</td>
+      <td>4.15</td>
+      <td>5.25</td>
+      <td>68.0</td>
+      <td>64.0</td>
       <td>0.00</td>
-      <td>41.0</td>
+      <td>0.31</td>
       <td>0.0</td>
-      <td>66.0</td>
-      <td>57.0</td>
-      <td>0.1</td>
+      <td>20.0</td>
+      <td>86.0</td>
+      <td>78.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -2833,152 +2828,152 @@ dataframe
     <tr>
       <th>7514</th>
       <td>1</td>
-      <td>80.0</td>
-      <td>75.0</td>
-      <td>265.0</td>
-      <td>260.0</td>
-      <td>80.0</td>
-      <td>NaN</td>
+      <td>68.0</td>
+      <td>67.0</td>
+      <td>145.0</td>
+      <td>135.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
       <td>Orthodox</td>
       <td>Orthodox</td>
-      <td>1976-03-05</td>
-      <td>1978-11-11</td>
-      <td>4.23</td>
-      <td>2.60</td>
-      <td>41.0</td>
-      <td>36.0</td>
-      <td>2.61</td>
-      <td>8.80</td>
-      <td>61.0</td>
-      <td>40.0</td>
-      <td>0.11</td>
-      <td>0.00</td>
-      <td>100.0</td>
-      <td>0.0</td>
-      <td>75.0</td>
-      <td>90.0</td>
-      <td>0.1</td>
-      <td>0.0</td>
+      <td>1985-07-09</td>
+      <td>1981-06-04</td>
+      <td>7.28</td>
+      <td>1.16</td>
+      <td>52.0</td>
+      <td>42.0</td>
+      <td>2.25</td>
+      <td>4.02</td>
+      <td>64.0</td>
+      <td>38.0</td>
+      <td>0.66</td>
+      <td>0.93</td>
+      <td>55.0</td>
+      <td>30.0</td>
+      <td>94.0</td>
+      <td>33.0</td>
+      <td>0.4</td>
+      <td>0.9</td>
     </tr>
     <tr>
       <th>7515</th>
       <td>1</td>
-      <td>75.0</td>
-      <td>72.0</td>
-      <td>235.0</td>
-      <td>265.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Orthodox</td>
-      <td>Switch</td>
-      <td>1968-01-05</td>
-      <td>None</td>
-      <td>0.76</td>
-      <td>1.35</td>
-      <td>83.0</td>
-      <td>30.0</td>
-      <td>2.12</td>
-      <td>3.55</td>
-      <td>30.0</td>
-      <td>38.0</td>
-      <td>4.55</td>
-      <td>1.07</td>
-      <td>100.0</td>
-      <td>33.0</td>
-      <td>0.0</td>
+      <td>67.0</td>
       <td>66.0</td>
-      <td>2.3</td>
-      <td>0.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>70.0</td>
+      <td>Orthodox</td>
+      <td>Orthodox</td>
+      <td>1989-07-31</td>
+      <td>1987-01-31</td>
+      <td>4.73</td>
+      <td>3.78</td>
+      <td>52.0</td>
+      <td>36.0</td>
+      <td>2.41</td>
+      <td>3.90</td>
+      <td>58.0</td>
+      <td>57.0</td>
+      <td>1.97</td>
+      <td>1.49</td>
+      <td>24.0</td>
+      <td>41.0</td>
+      <td>45.0</td>
+      <td>91.0</td>
+      <td>0.8</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>7516</th>
       <td>1</td>
       <td>71.0</td>
-      <td>70.0</td>
+      <td>73.0</td>
+      <td>170.0</td>
       <td>155.0</td>
-      <td>155.0</td>
-      <td>76.0</td>
-      <td>71.0</td>
-      <td>Orthodox</td>
+      <td>74.0</td>
+      <td>73.0</td>
       <td>Southpaw</td>
-      <td>1984-02-12</td>
-      <td>1983-10-07</td>
-      <td>4.94</td>
-      <td>1.95</td>
-      <td>45.0</td>
-      <td>31.0</td>
+      <td>Orthodox</td>
+      <td>1982-03-20</td>
+      <td>1983-03-29</td>
+      <td>3.85</td>
       <td>4.41</td>
-      <td>2.51</td>
-      <td>55.0</td>
-      <td>63.0</td>
-      <td>0.39</td>
-      <td>4.08</td>
-      <td>35.0</td>
+      <td>47.0</td>
+      <td>46.0</td>
+      <td>4.67</td>
+      <td>4.48</td>
+      <td>59.0</td>
       <td>53.0</td>
-      <td>67.0</td>
-      <td>92.0</td>
-      <td>0.9</td>
-      <td>0.8</td>
+      <td>0.65</td>
+      <td>1.16</td>
+      <td>64.0</td>
+      <td>33.0</td>
+      <td>65.0</td>
+      <td>73.0</td>
+      <td>0.0</td>
+      <td>1.2</td>
     </tr>
     <tr>
       <th>7517</th>
       <td>1</td>
-      <td>72.0</td>
-      <td>74.0</td>
-      <td>185.0</td>
-      <td>185.0</td>
-      <td>74.0</td>
-      <td>76.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>71.0</td>
       <td>Orthodox</td>
       <td>Orthodox</td>
-      <td>1981-01-28</td>
-      <td>1983-08-10</td>
-      <td>2.93</td>
-      <td>2.65</td>
-      <td>50.0</td>
+      <td>1982-05-21</td>
+      <td>1992-07-14</td>
+      <td>3.13</td>
+      <td>2.95</td>
       <td>47.0</td>
-      <td>2.90</td>
-      <td>2.58</td>
+      <td>33.0</td>
+      <td>2.87</td>
+      <td>3.02</td>
       <td>57.0</td>
-      <td>54.0</td>
-      <td>1.45</td>
-      <td>3.55</td>
-      <td>34.0</td>
-      <td>54.0</td>
-      <td>59.0</td>
-      <td>62.0</td>
-      <td>0.8</td>
-      <td>1.2</td>
+      <td>51.0</td>
+      <td>1.84</td>
+      <td>1.31</td>
+      <td>33.0</td>
+      <td>31.0</td>
+      <td>46.0</td>
+      <td>47.0</td>
+      <td>0.9</td>
+      <td>1.7</td>
     </tr>
     <tr>
       <th>7518</th>
       <td>2</td>
-      <td>75.0</td>
-      <td>75.0</td>
-      <td>235.0</td>
-      <td>205.0</td>
-      <td>76.0</td>
-      <td>79.0</td>
-      <td>Orthodox</td>
-      <td>Orthodox</td>
-      <td>1981-09-02</td>
-      <td>1991-06-26</td>
-      <td>2.41</td>
-      <td>2.78</td>
-      <td>44.0</td>
       <td>64.0</td>
-      <td>3.02</td>
-      <td>0.52</td>
-      <td>55.0</td>
+      <td>62.0</td>
+      <td>115.0</td>
+      <td>115.0</td>
+      <td>65.0</td>
+      <td>63.0</td>
+      <td>Orthodox</td>
+      <td>Orthodox</td>
+      <td>1991-04-11</td>
+      <td>1990-07-14</td>
+      <td>3.89</td>
+      <td>4.83</td>
       <td>43.0</td>
-      <td>1.01</td>
-      <td>5.14</td>
-      <td>23.0</td>
-      <td>55.0</td>
-      <td>45.0</td>
-      <td>75.0</td>
-      <td>0.1</td>
-      <td>2.4</td>
+      <td>47.0</td>
+      <td>4.75</td>
+      <td>5.56</td>
+      <td>53.0</td>
+      <td>38.0</td>
+      <td>2.00</td>
+      <td>2.27</td>
+      <td>57.0</td>
+      <td>50.0</td>
+      <td>61.0</td>
+      <td>77.0</td>
+      <td>0.6</td>
+      <td>0.4</td>
     </tr>
   </tbody>
 </table>
@@ -3053,152 +3048,152 @@ dataframe
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>68.0</td>
-      <td>69.0</td>
-      <td>135.0</td>
-      <td>135.0</td>
-      <td>69.0</td>
-      <td>68.0</td>
+      <td>2</td>
+      <td>72.0</td>
+      <td>72.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>74.0</td>
+      <td>75.0</td>
       <td>0.0</td>
       <td>1.0</td>
-      <td>1981-10-17</td>
-      <td>1988-03-26</td>
-      <td>3.21</td>
-      <td>5.24</td>
-      <td>40.0</td>
-      <td>40.0</td>
-      <td>2.79</td>
-      <td>6.33</td>
-      <td>56.0</td>
-      <td>57.0</td>
-      <td>0.90</td>
-      <td>0.16</td>
-      <td>30.0</td>
+      <td>1989-12-12</td>
+      <td>1991-05-04</td>
+      <td>3.32</td>
+      <td>4.72</td>
+      <td>39.0</td>
+      <td>53.0</td>
+      <td>3.44</td>
+      <td>4.11</td>
+      <td>61.0</td>
+      <td>60.0</td>
+      <td>1.46</td>
+      <td>0.47</td>
+      <td>39.0</td>
       <td>50.0</td>
-      <td>78.0</td>
-      <td>76.0</td>
-      <td>0.1</td>
-      <td>0.2</td>
+      <td>83.0</td>
+      <td>92.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
+      <td>75.0</td>
       <td>70.0</td>
-      <td>71.0</td>
+      <td>185.0</td>
       <td>170.0</td>
-      <td>170.0</td>
-      <td>72.0</td>
-      <td>72.0</td>
+      <td>75.0</td>
+      <td>76.0</td>
+      <td>0.0</td>
       <td>1.0</td>
-      <td>1.0</td>
-      <td>1980-04-10</td>
-      <td>1983-03-24</td>
-      <td>2.69</td>
-      <td>3.29</td>
-      <td>43.0</td>
-      <td>46.0</td>
-      <td>3.13</td>
-      <td>3.63</td>
-      <td>51.0</td>
-      <td>58.0</td>
-      <td>2.53</td>
-      <td>1.09</td>
+      <td>1995-03-01</td>
+      <td>1994-04-27</td>
+      <td>4.53</td>
+      <td>3.87</td>
+      <td>54.0</td>
+      <td>33.0</td>
+      <td>3.26</td>
+      <td>3.31</td>
+      <td>61.0</td>
+      <td>57.0</td>
+      <td>0.87</td>
+      <td>1.51</td>
+      <td>31.0</td>
       <td>36.0</td>
-      <td>34.0</td>
-      <td>72.0</td>
-      <td>46.0</td>
-      <td>0.3</td>
-      <td>1.3</td>
+      <td>76.0</td>
+      <td>65.0</td>
+      <td>1.5</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1</td>
-      <td>70.0</td>
-      <td>68.0</td>
+      <td>72.0</td>
+      <td>71.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>73.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1997-06-13</td>
+      <td>1994-11-17</td>
+      <td>2.62</td>
+      <td>1.67</td>
+      <td>46.0</td>
+      <td>38.0</td>
+      <td>1.49</td>
+      <td>2.93</td>
+      <td>75.0</td>
+      <td>52.0</td>
+      <td>1.06</td>
+      <td>0.00</td>
+      <td>60.0</td>
+      <td>0.0</td>
+      <td>81.0</td>
+      <td>33.0</td>
+      <td>0.7</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>71.0</td>
+      <td>71.0</td>
       <td>155.0</td>
-      <td>155.0</td>
+      <td>145.0</td>
       <td>73.0</td>
       <td>71.0</td>
       <td>1.0</td>
       <td>0.0</td>
-      <td>1995-01-03</td>
-      <td>1985-08-15</td>
-      <td>5.13</td>
-      <td>3.65</td>
+      <td>1995-12-18</td>
+      <td>1990-03-25</td>
+      <td>5.53</td>
+      <td>3.52</td>
       <td>52.0</td>
-      <td>53.0</td>
-      <td>3.70</td>
-      <td>1.77</td>
-      <td>41.0</td>
-      <td>57.0</td>
-      <td>0.98</td>
-      <td>0.40</td>
-      <td>25.0</td>
-      <td>25.0</td>
-      <td>56.0</td>
-      <td>30.0</td>
-      <td>1.6</td>
-      <td>0.4</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>77.0</td>
-      <td>72.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>80.0</td>
-      <td>72.0</td>
-      <td>1.0</td>
+      <td>51.0</td>
+      <td>5.20</td>
+      <td>6.88</td>
+      <td>44.0</td>
+      <td>39.0</td>
+      <td>4.55</td>
+      <td>4.80</td>
+      <td>36.0</td>
+      <td>40.0</td>
+      <td>66.0</td>
       <td>0.0</td>
-      <td>1988-07-28</td>
-      <td>1989-12-10</td>
-      <td>4.79</td>
-      <td>2.31</td>
-      <td>50.0</td>
-      <td>31.0</td>
-      <td>3.31</td>
-      <td>4.30</td>
-      <td>55.0</td>
-      <td>47.0</td>
-      <td>0.20</td>
-      <td>0.00</td>
-      <td>33.0</td>
-      <td>0.0</td>
-      <td>64.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>1.4</td>
+      <td>2.4</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
-      <td>74.0</td>
-      <td>73.0</td>
-      <td>265.0</td>
-      <td>265.0</td>
-      <td>75.0</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1986-08-04</td>
-      <td>1982-10-20</td>
-      <td>2.08</td>
-      <td>1.03</td>
-      <td>46.0</td>
-      <td>31.0</td>
-      <td>1.52</td>
-      <td>3.01</td>
-      <td>59.0</td>
-      <td>55.0</td>
-      <td>1.83</td>
-      <td>0.00</td>
-      <td>41.0</td>
+      <td>2</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>155.0</td>
+      <td>155.0</td>
+      <td>68.0</td>
+      <td>72.0</td>
       <td>0.0</td>
-      <td>66.0</td>
-      <td>57.0</td>
-      <td>0.1</td>
+      <td>1.0</td>
+      <td>1985-05-03</td>
+      <td>1995-08-22</td>
+      <td>5.52</td>
+      <td>5.78</td>
+      <td>49.0</td>
+      <td>44.0</td>
+      <td>4.15</td>
+      <td>5.25</td>
+      <td>68.0</td>
+      <td>64.0</td>
+      <td>0.00</td>
+      <td>0.31</td>
+      <td>0.0</td>
+      <td>20.0</td>
+      <td>86.0</td>
+      <td>78.0</td>
+      <td>0.0</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -3234,152 +3229,152 @@ dataframe
     <tr>
       <th>7514</th>
       <td>1</td>
-      <td>80.0</td>
-      <td>75.0</td>
-      <td>265.0</td>
-      <td>260.0</td>
-      <td>80.0</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1976-03-05</td>
-      <td>1978-11-11</td>
-      <td>4.23</td>
-      <td>2.60</td>
-      <td>41.0</td>
-      <td>36.0</td>
-      <td>2.61</td>
-      <td>8.80</td>
-      <td>61.0</td>
-      <td>40.0</td>
-      <td>0.11</td>
-      <td>0.00</td>
-      <td>100.0</td>
+      <td>68.0</td>
+      <td>67.0</td>
+      <td>145.0</td>
+      <td>135.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
       <td>0.0</td>
-      <td>75.0</td>
-      <td>90.0</td>
-      <td>0.1</td>
       <td>0.0</td>
+      <td>1985-07-09</td>
+      <td>1981-06-04</td>
+      <td>7.28</td>
+      <td>1.16</td>
+      <td>52.0</td>
+      <td>42.0</td>
+      <td>2.25</td>
+      <td>4.02</td>
+      <td>64.0</td>
+      <td>38.0</td>
+      <td>0.66</td>
+      <td>0.93</td>
+      <td>55.0</td>
+      <td>30.0</td>
+      <td>94.0</td>
+      <td>33.0</td>
+      <td>0.4</td>
+      <td>0.9</td>
     </tr>
     <tr>
       <th>7515</th>
       <td>1</td>
-      <td>75.0</td>
-      <td>72.0</td>
-      <td>235.0</td>
-      <td>265.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1.0</td>
-      <td>2.0</td>
-      <td>1968-01-05</td>
-      <td>None</td>
-      <td>0.76</td>
-      <td>1.35</td>
-      <td>83.0</td>
-      <td>30.0</td>
-      <td>2.12</td>
-      <td>3.55</td>
-      <td>30.0</td>
-      <td>38.0</td>
-      <td>4.55</td>
-      <td>1.07</td>
-      <td>100.0</td>
-      <td>33.0</td>
-      <td>0.0</td>
+      <td>67.0</td>
       <td>66.0</td>
-      <td>2.3</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>70.0</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>1989-07-31</td>
+      <td>1987-01-31</td>
+      <td>4.73</td>
+      <td>3.78</td>
+      <td>52.0</td>
+      <td>36.0</td>
+      <td>2.41</td>
+      <td>3.90</td>
+      <td>58.0</td>
+      <td>57.0</td>
+      <td>1.97</td>
+      <td>1.49</td>
+      <td>24.0</td>
+      <td>41.0</td>
+      <td>45.0</td>
+      <td>91.0</td>
+      <td>0.8</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>7516</th>
       <td>1</td>
       <td>71.0</td>
-      <td>70.0</td>
+      <td>73.0</td>
+      <td>170.0</td>
       <td>155.0</td>
-      <td>155.0</td>
-      <td>76.0</td>
-      <td>71.0</td>
+      <td>74.0</td>
+      <td>73.0</td>
       <td>1.0</td>
       <td>0.0</td>
-      <td>1984-02-12</td>
-      <td>1983-10-07</td>
-      <td>4.94</td>
-      <td>1.95</td>
-      <td>45.0</td>
-      <td>31.0</td>
+      <td>1982-03-20</td>
+      <td>1983-03-29</td>
+      <td>3.85</td>
       <td>4.41</td>
-      <td>2.51</td>
-      <td>55.0</td>
-      <td>63.0</td>
-      <td>0.39</td>
-      <td>4.08</td>
-      <td>35.0</td>
+      <td>47.0</td>
+      <td>46.0</td>
+      <td>4.67</td>
+      <td>4.48</td>
+      <td>59.0</td>
       <td>53.0</td>
-      <td>67.0</td>
-      <td>92.0</td>
-      <td>0.9</td>
-      <td>0.8</td>
+      <td>0.65</td>
+      <td>1.16</td>
+      <td>64.0</td>
+      <td>33.0</td>
+      <td>65.0</td>
+      <td>73.0</td>
+      <td>0.0</td>
+      <td>1.2</td>
     </tr>
     <tr>
       <th>7517</th>
       <td>1</td>
-      <td>72.0</td>
-      <td>74.0</td>
-      <td>185.0</td>
-      <td>185.0</td>
-      <td>74.0</td>
-      <td>76.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1981-01-28</td>
-      <td>1983-08-10</td>
-      <td>2.93</td>
-      <td>2.65</td>
-      <td>50.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>71.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1982-05-21</td>
+      <td>1992-07-14</td>
+      <td>3.13</td>
+      <td>2.95</td>
       <td>47.0</td>
-      <td>2.90</td>
-      <td>2.58</td>
+      <td>33.0</td>
+      <td>2.87</td>
+      <td>3.02</td>
       <td>57.0</td>
-      <td>54.0</td>
-      <td>1.45</td>
-      <td>3.55</td>
-      <td>34.0</td>
-      <td>54.0</td>
-      <td>59.0</td>
-      <td>62.0</td>
-      <td>0.8</td>
-      <td>1.2</td>
+      <td>51.0</td>
+      <td>1.84</td>
+      <td>1.31</td>
+      <td>33.0</td>
+      <td>31.0</td>
+      <td>46.0</td>
+      <td>47.0</td>
+      <td>0.9</td>
+      <td>1.7</td>
     </tr>
     <tr>
       <th>7518</th>
       <td>2</td>
-      <td>75.0</td>
-      <td>75.0</td>
-      <td>235.0</td>
-      <td>205.0</td>
-      <td>76.0</td>
-      <td>79.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1981-09-02</td>
-      <td>1991-06-26</td>
-      <td>2.41</td>
-      <td>2.78</td>
-      <td>44.0</td>
       <td>64.0</td>
-      <td>3.02</td>
-      <td>0.52</td>
-      <td>55.0</td>
+      <td>62.0</td>
+      <td>115.0</td>
+      <td>115.0</td>
+      <td>65.0</td>
+      <td>63.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1991-04-11</td>
+      <td>1990-07-14</td>
+      <td>3.89</td>
+      <td>4.83</td>
       <td>43.0</td>
-      <td>1.01</td>
-      <td>5.14</td>
-      <td>23.0</td>
-      <td>55.0</td>
-      <td>45.0</td>
-      <td>75.0</td>
-      <td>0.1</td>
-      <td>2.4</td>
+      <td>47.0</td>
+      <td>4.75</td>
+      <td>5.56</td>
+      <td>53.0</td>
+      <td>38.0</td>
+      <td>2.00</td>
+      <td>2.27</td>
+      <td>57.0</td>
+      <td>50.0</td>
+      <td>61.0</td>
+      <td>77.0</td>
+      <td>0.6</td>
+      <td>0.4</td>
     </tr>
   </tbody>
 </table>
@@ -3406,7 +3401,7 @@ for i in numerical_columns:
 ```
 
 
-    <Figure size 800x500 with 0 Axes>
+    <Figure size 640x480 with 0 Axes>
 
 
 
@@ -3754,8 +3749,8 @@ dataframe.describe()
       <td>168.277867</td>
       <td>72.136940</td>
       <td>71.982162</td>
-      <td>0.850127</td>
-      <td>0.863722</td>
+      <td>0.300681</td>
+      <td>0.307599</td>
       <td>3.403030</td>
       <td>3.268089</td>
       <td>44.128475</td>
@@ -3782,8 +3777,8 @@ dataframe.describe()
       <td>36.796266</td>
       <td>4.262536</td>
       <td>4.186640</td>
-      <td>0.485053</td>
-      <td>0.488992</td>
+      <td>0.564046</td>
+      <td>0.578275</td>
       <td>1.312669</td>
       <td>1.457575</td>
       <td>9.254967</td>
@@ -3838,8 +3833,8 @@ dataframe.describe()
       <td>145.000000</td>
       <td>70.000000</td>
       <td>69.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>2.570000</td>
       <td>2.340000</td>
       <td>40.000000</td>
@@ -3866,8 +3861,8 @@ dataframe.describe()
       <td>155.000000</td>
       <td>72.000000</td>
       <td>72.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>3.320000</td>
       <td>3.250000</td>
       <td>45.000000</td>
@@ -3894,8 +3889,8 @@ dataframe.describe()
       <td>185.000000</td>
       <td>75.000000</td>
       <td>75.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>4.190000</td>
       <td>4.110000</td>
       <td>50.000000</td>
@@ -3947,6 +3942,1018 @@ dataframe.describe()
 
 
 
+
+```python
+# We are going to feature engineer the fighters ages before we impute the values as the simple imputer
+# I want to use from sklearn doesn't work with datetime objects
+from datetime import date
+# first lets gets todays date to calculate the fighters age
+year = datetime.datetime.now().year
+
+# Lets test on an example
+
+# calculate the age of the fighter
+#age = today.year - year
+#print("Your age is",age,"years.")
+
+# Lets turn this into a list comprehension to add the column
+#dataframe['fighter_a_age'] = [birthdate.year - year for birthdate.year in dataframe['fighter_a_dob']]
+#dataframe['fighter_a_age'] = [year - birthdate.year for birthdate in dataframe['fighter_a_dob'] if birthdate != None]
+dataframe['fighter_a_age'] = [year - birthdate.year if birthdate is not None else None for birthdate in dataframe['fighter_a_dob']]
+dataframe['fighter_b_age'] = [year - birthdate.year if birthdate is not None else None for birthdate in dataframe['fighter_b_dob']]
+
+columns_to_remove = ['fighter_a_dob', 'fighter_b_dob']
+dataframe.drop(columns=columns_to_remove, axis=1, inplace=True)
+
+dataframe
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>winner</th>
+      <th>fighter_a_height</th>
+      <th>fighter_b_height</th>
+      <th>fighter_a_weight</th>
+      <th>fighter_b_weight</th>
+      <th>fighter_a_reach</th>
+      <th>fighter_b_reach</th>
+      <th>fighter_a_stance</th>
+      <th>fighter_b_stance</th>
+      <th>fighter_a_SLpM</th>
+      <th>fighter_b_SLpM</th>
+      <th>fighter_a_str_acc</th>
+      <th>fighter_b_str_acc</th>
+      <th>fighter_a_SApM</th>
+      <th>fighter_b_SApM</th>
+      <th>fighter_a_str_def</th>
+      <th>fighter_b_str_def</th>
+      <th>fighter_a_TD_avg</th>
+      <th>fighter_b_TD_avg</th>
+      <th>fighter_a_TD_acc</th>
+      <th>fighter_b_TD_acc</th>
+      <th>fighter_a_TD_def</th>
+      <th>fighter_b_TD_def</th>
+      <th>fighter_a_sub_avg</th>
+      <th>fighter_b_sub_avg</th>
+      <th>fighter_a_age</th>
+      <th>fighter_b_age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>72.0</td>
+      <td>72.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>74.0</td>
+      <td>75.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.32</td>
+      <td>4.72</td>
+      <td>39.0</td>
+      <td>53.0</td>
+      <td>3.44</td>
+      <td>4.11</td>
+      <td>61.0</td>
+      <td>60.0</td>
+      <td>1.46</td>
+      <td>0.47</td>
+      <td>39.0</td>
+      <td>50.0</td>
+      <td>83.0</td>
+      <td>92.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>35.0</td>
+      <td>33.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>75.0</td>
+      <td>70.0</td>
+      <td>185.0</td>
+      <td>170.0</td>
+      <td>75.0</td>
+      <td>76.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>4.53</td>
+      <td>3.87</td>
+      <td>54.0</td>
+      <td>33.0</td>
+      <td>3.26</td>
+      <td>3.31</td>
+      <td>61.0</td>
+      <td>57.0</td>
+      <td>0.87</td>
+      <td>1.51</td>
+      <td>31.0</td>
+      <td>36.0</td>
+      <td>76.0</td>
+      <td>65.0</td>
+      <td>1.5</td>
+      <td>0.0</td>
+      <td>29.0</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>72.0</td>
+      <td>71.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>73.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.62</td>
+      <td>1.67</td>
+      <td>46.0</td>
+      <td>38.0</td>
+      <td>1.49</td>
+      <td>2.93</td>
+      <td>75.0</td>
+      <td>52.0</td>
+      <td>1.06</td>
+      <td>0.00</td>
+      <td>60.0</td>
+      <td>0.0</td>
+      <td>81.0</td>
+      <td>33.0</td>
+      <td>0.7</td>
+      <td>0.5</td>
+      <td>27.0</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>71.0</td>
+      <td>71.0</td>
+      <td>155.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>71.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>5.53</td>
+      <td>3.52</td>
+      <td>52.0</td>
+      <td>51.0</td>
+      <td>5.20</td>
+      <td>6.88</td>
+      <td>44.0</td>
+      <td>39.0</td>
+      <td>4.55</td>
+      <td>4.80</td>
+      <td>36.0</td>
+      <td>40.0</td>
+      <td>66.0</td>
+      <td>0.0</td>
+      <td>1.4</td>
+      <td>2.4</td>
+      <td>29.0</td>
+      <td>34.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>155.0</td>
+      <td>155.0</td>
+      <td>68.0</td>
+      <td>72.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>5.52</td>
+      <td>5.78</td>
+      <td>49.0</td>
+      <td>44.0</td>
+      <td>4.15</td>
+      <td>5.25</td>
+      <td>68.0</td>
+      <td>64.0</td>
+      <td>0.00</td>
+      <td>0.31</td>
+      <td>0.0</td>
+      <td>20.0</td>
+      <td>86.0</td>
+      <td>78.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>39.0</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>7514</th>
+      <td>1</td>
+      <td>68.0</td>
+      <td>67.0</td>
+      <td>145.0</td>
+      <td>135.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>7.28</td>
+      <td>1.16</td>
+      <td>52.0</td>
+      <td>42.0</td>
+      <td>2.25</td>
+      <td>4.02</td>
+      <td>64.0</td>
+      <td>38.0</td>
+      <td>0.66</td>
+      <td>0.93</td>
+      <td>55.0</td>
+      <td>30.0</td>
+      <td>94.0</td>
+      <td>33.0</td>
+      <td>0.4</td>
+      <td>0.9</td>
+      <td>39.0</td>
+      <td>43.0</td>
+    </tr>
+    <tr>
+      <th>7515</th>
+      <td>1</td>
+      <td>67.0</td>
+      <td>66.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>70.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.73</td>
+      <td>3.78</td>
+      <td>52.0</td>
+      <td>36.0</td>
+      <td>2.41</td>
+      <td>3.90</td>
+      <td>58.0</td>
+      <td>57.0</td>
+      <td>1.97</td>
+      <td>1.49</td>
+      <td>24.0</td>
+      <td>41.0</td>
+      <td>45.0</td>
+      <td>91.0</td>
+      <td>0.8</td>
+      <td>0.5</td>
+      <td>35.0</td>
+      <td>37.0</td>
+    </tr>
+    <tr>
+      <th>7516</th>
+      <td>1</td>
+      <td>71.0</td>
+      <td>73.0</td>
+      <td>170.0</td>
+      <td>155.0</td>
+      <td>74.0</td>
+      <td>73.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.85</td>
+      <td>4.41</td>
+      <td>47.0</td>
+      <td>46.0</td>
+      <td>4.67</td>
+      <td>4.48</td>
+      <td>59.0</td>
+      <td>53.0</td>
+      <td>0.65</td>
+      <td>1.16</td>
+      <td>64.0</td>
+      <td>33.0</td>
+      <td>65.0</td>
+      <td>73.0</td>
+      <td>0.0</td>
+      <td>1.2</td>
+      <td>42.0</td>
+      <td>41.0</td>
+    </tr>
+    <tr>
+      <th>7517</th>
+      <td>1</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>71.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.13</td>
+      <td>2.95</td>
+      <td>47.0</td>
+      <td>33.0</td>
+      <td>2.87</td>
+      <td>3.02</td>
+      <td>57.0</td>
+      <td>51.0</td>
+      <td>1.84</td>
+      <td>1.31</td>
+      <td>33.0</td>
+      <td>31.0</td>
+      <td>46.0</td>
+      <td>47.0</td>
+      <td>0.9</td>
+      <td>1.7</td>
+      <td>42.0</td>
+      <td>32.0</td>
+    </tr>
+    <tr>
+      <th>7518</th>
+      <td>2</td>
+      <td>64.0</td>
+      <td>62.0</td>
+      <td>115.0</td>
+      <td>115.0</td>
+      <td>65.0</td>
+      <td>63.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.89</td>
+      <td>4.83</td>
+      <td>43.0</td>
+      <td>47.0</td>
+      <td>4.75</td>
+      <td>5.56</td>
+      <td>53.0</td>
+      <td>38.0</td>
+      <td>2.00</td>
+      <td>2.27</td>
+      <td>57.0</td>
+      <td>50.0</td>
+      <td>61.0</td>
+      <td>77.0</td>
+      <td>0.6</td>
+      <td>0.4</td>
+      <td>33.0</td>
+      <td>34.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>7519 rows × 27 columns</p>
+</div>
+
+
+
+
+```python
+from sklearn.impute import SimpleImputer
+# Assuming dataframe is a Pandas DataFrame with numeric columns containing NaN values
+numeric_columns = dataframe.select_dtypes(include=[np.number]).columns
+
+imp_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
+transformed_data = imp_mean.fit_transform(dataframe[numeric_columns])
+
+dataframe[numeric_columns] = transformed_data
+
+# Now if you want to check for NaN values in the DataFrame
+print(dataframe.isna().sum())
+```
+
+    winner               0
+    fighter_a_height     0
+    fighter_b_height     0
+    fighter_a_weight     0
+    fighter_b_weight     0
+    fighter_a_reach      0
+    fighter_b_reach      0
+    fighter_a_stance     0
+    fighter_b_stance     0
+    fighter_a_SLpM       0
+    fighter_b_SLpM       0
+    fighter_a_str_acc    0
+    fighter_b_str_acc    0
+    fighter_a_SApM       0
+    fighter_b_SApM       0
+    fighter_a_str_def    0
+    fighter_b_str_def    0
+    fighter_a_TD_avg     0
+    fighter_b_TD_avg     0
+    fighter_a_TD_acc     0
+    fighter_b_TD_acc     0
+    fighter_a_TD_def     0
+    fighter_b_TD_def     0
+    fighter_a_sub_avg    0
+    fighter_b_sub_avg    0
+    fighter_a_age        0
+    fighter_b_age        0
+    dtype: int64
+    
+
+
+```python
+dataframe
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>winner</th>
+      <th>fighter_a_height</th>
+      <th>fighter_b_height</th>
+      <th>fighter_a_weight</th>
+      <th>fighter_b_weight</th>
+      <th>fighter_a_reach</th>
+      <th>fighter_b_reach</th>
+      <th>fighter_a_stance</th>
+      <th>fighter_b_stance</th>
+      <th>fighter_a_SLpM</th>
+      <th>fighter_b_SLpM</th>
+      <th>fighter_a_str_acc</th>
+      <th>fighter_b_str_acc</th>
+      <th>fighter_a_SApM</th>
+      <th>fighter_b_SApM</th>
+      <th>fighter_a_str_def</th>
+      <th>fighter_b_str_def</th>
+      <th>fighter_a_TD_avg</th>
+      <th>fighter_b_TD_avg</th>
+      <th>fighter_a_TD_acc</th>
+      <th>fighter_b_TD_acc</th>
+      <th>fighter_a_TD_def</th>
+      <th>fighter_b_TD_def</th>
+      <th>fighter_a_sub_avg</th>
+      <th>fighter_b_sub_avg</th>
+      <th>fighter_a_age</th>
+      <th>fighter_b_age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.0</td>
+      <td>72.0</td>
+      <td>72.0</td>
+      <td>185.0</td>
+      <td>185.0</td>
+      <td>74.0</td>
+      <td>75.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>3.32</td>
+      <td>4.72</td>
+      <td>39.0</td>
+      <td>53.0</td>
+      <td>3.44</td>
+      <td>4.11</td>
+      <td>61.0</td>
+      <td>60.0</td>
+      <td>1.46</td>
+      <td>0.47</td>
+      <td>39.0</td>
+      <td>50.0</td>
+      <td>83.0</td>
+      <td>92.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>35.0</td>
+      <td>33.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.0</td>
+      <td>75.0</td>
+      <td>70.0</td>
+      <td>185.0</td>
+      <td>170.0</td>
+      <td>75.0</td>
+      <td>76.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>4.53</td>
+      <td>3.87</td>
+      <td>54.0</td>
+      <td>33.0</td>
+      <td>3.26</td>
+      <td>3.31</td>
+      <td>61.0</td>
+      <td>57.0</td>
+      <td>0.87</td>
+      <td>1.51</td>
+      <td>31.0</td>
+      <td>36.0</td>
+      <td>76.0</td>
+      <td>65.0</td>
+      <td>1.5</td>
+      <td>0.0</td>
+      <td>29.0</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>72.0</td>
+      <td>71.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>73.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.62</td>
+      <td>1.67</td>
+      <td>46.0</td>
+      <td>38.0</td>
+      <td>1.49</td>
+      <td>2.93</td>
+      <td>75.0</td>
+      <td>52.0</td>
+      <td>1.06</td>
+      <td>0.00</td>
+      <td>60.0</td>
+      <td>0.0</td>
+      <td>81.0</td>
+      <td>33.0</td>
+      <td>0.7</td>
+      <td>0.5</td>
+      <td>27.0</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.0</td>
+      <td>71.0</td>
+      <td>71.0</td>
+      <td>155.0</td>
+      <td>145.0</td>
+      <td>73.0</td>
+      <td>71.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>5.53</td>
+      <td>3.52</td>
+      <td>52.0</td>
+      <td>51.0</td>
+      <td>5.20</td>
+      <td>6.88</td>
+      <td>44.0</td>
+      <td>39.0</td>
+      <td>4.55</td>
+      <td>4.80</td>
+      <td>36.0</td>
+      <td>40.0</td>
+      <td>66.0</td>
+      <td>0.0</td>
+      <td>1.4</td>
+      <td>2.4</td>
+      <td>29.0</td>
+      <td>34.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>155.0</td>
+      <td>155.0</td>
+      <td>68.0</td>
+      <td>72.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>5.52</td>
+      <td>5.78</td>
+      <td>49.0</td>
+      <td>44.0</td>
+      <td>4.15</td>
+      <td>5.25</td>
+      <td>68.0</td>
+      <td>64.0</td>
+      <td>0.00</td>
+      <td>0.31</td>
+      <td>0.0</td>
+      <td>20.0</td>
+      <td>86.0</td>
+      <td>78.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>39.0</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>7514</th>
+      <td>1.0</td>
+      <td>68.0</td>
+      <td>67.0</td>
+      <td>145.0</td>
+      <td>135.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>7.28</td>
+      <td>1.16</td>
+      <td>52.0</td>
+      <td>42.0</td>
+      <td>2.25</td>
+      <td>4.02</td>
+      <td>64.0</td>
+      <td>38.0</td>
+      <td>0.66</td>
+      <td>0.93</td>
+      <td>55.0</td>
+      <td>30.0</td>
+      <td>94.0</td>
+      <td>33.0</td>
+      <td>0.4</td>
+      <td>0.9</td>
+      <td>39.0</td>
+      <td>43.0</td>
+    </tr>
+    <tr>
+      <th>7515</th>
+      <td>1.0</td>
+      <td>67.0</td>
+      <td>66.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>70.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>4.73</td>
+      <td>3.78</td>
+      <td>52.0</td>
+      <td>36.0</td>
+      <td>2.41</td>
+      <td>3.90</td>
+      <td>58.0</td>
+      <td>57.0</td>
+      <td>1.97</td>
+      <td>1.49</td>
+      <td>24.0</td>
+      <td>41.0</td>
+      <td>45.0</td>
+      <td>91.0</td>
+      <td>0.8</td>
+      <td>0.5</td>
+      <td>35.0</td>
+      <td>37.0</td>
+    </tr>
+    <tr>
+      <th>7516</th>
+      <td>1.0</td>
+      <td>71.0</td>
+      <td>73.0</td>
+      <td>170.0</td>
+      <td>155.0</td>
+      <td>74.0</td>
+      <td>73.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.85</td>
+      <td>4.41</td>
+      <td>47.0</td>
+      <td>46.0</td>
+      <td>4.67</td>
+      <td>4.48</td>
+      <td>59.0</td>
+      <td>53.0</td>
+      <td>0.65</td>
+      <td>1.16</td>
+      <td>64.0</td>
+      <td>33.0</td>
+      <td>65.0</td>
+      <td>73.0</td>
+      <td>0.0</td>
+      <td>1.2</td>
+      <td>42.0</td>
+      <td>41.0</td>
+    </tr>
+    <tr>
+      <th>7517</th>
+      <td>1.0</td>
+      <td>68.0</td>
+      <td>70.0</td>
+      <td>145.0</td>
+      <td>145.0</td>
+      <td>71.0</td>
+      <td>71.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.13</td>
+      <td>2.95</td>
+      <td>47.0</td>
+      <td>33.0</td>
+      <td>2.87</td>
+      <td>3.02</td>
+      <td>57.0</td>
+      <td>51.0</td>
+      <td>1.84</td>
+      <td>1.31</td>
+      <td>33.0</td>
+      <td>31.0</td>
+      <td>46.0</td>
+      <td>47.0</td>
+      <td>0.9</td>
+      <td>1.7</td>
+      <td>42.0</td>
+      <td>32.0</td>
+    </tr>
+    <tr>
+      <th>7518</th>
+      <td>2.0</td>
+      <td>64.0</td>
+      <td>62.0</td>
+      <td>115.0</td>
+      <td>115.0</td>
+      <td>65.0</td>
+      <td>63.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3.89</td>
+      <td>4.83</td>
+      <td>43.0</td>
+      <td>47.0</td>
+      <td>4.75</td>
+      <td>5.56</td>
+      <td>53.0</td>
+      <td>38.0</td>
+      <td>2.00</td>
+      <td>2.27</td>
+      <td>57.0</td>
+      <td>50.0</td>
+      <td>61.0</td>
+      <td>77.0</td>
+      <td>0.6</td>
+      <td>0.4</td>
+      <td>33.0</td>
+      <td>34.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>7519 rows × 27 columns</p>
+</div>
+
+
+
+
+```python
+# Now that our data is cleaned let start with a machine learning model before we
+# some feature engineering, then we can compare the effects of feature engineering.
+#import torch
+#import torch.nn as nn
+#import torch.optim as optim
+from sklearn.model_selection import train_test_split
+
+# split our data into target and features
+X = dataframe.drop('winner', axis=1)
+y = dataframe['winner']
+
+X = torch.tensor(X.values, dtype=torch.float32)
+y = torch.tensor(y, dtype=torch.float32).reshape(-1)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=13)
+X_train.shape
+```
+
+
+
+
+    torch.Size([6015, 26])
+
+
+
+
+```python
+# build the model
+
+# Check if we are using GPU or CPU
+device = "cuda" if torch.cuda.is_available() else "cpu"
+device
+```
+
+
+
+
+    'cpu'
+
+
+
+
+```python
+# build a class for our model
+
+class ufc_fighter_v0(nn.Module):
+    def __init__(self):
+        super().__init__()
+        
+        # create two layer neural network
+        self.layer_1 = nn.Linear(26, 52)
+        self.layer_2 = nn.Linear(52, 52)
+        self.layer_3 = nn.Linear(52, 1)
+    
+    def forward(self, x):
+        return self.layer_3(self.layer_2(self.layer_1(x)))
+    
+```
+
+
+```python
+# instantiate our model
+model_0 = ufc_fighter_v0().to(device)
+model_0
+```
+
+
+
+
+    ufc_fighter_v0(
+      (layer_1): Linear(in_features=26, out_features=52, bias=True)
+      (layer_2): Linear(in_features=52, out_features=52, bias=True)
+      (layer_3): Linear(in_features=52, out_features=1, bias=True)
+    )
+
+
+
+
+```python
+# Set up a loss function
+loss_fn = nn.BCEWithLogitsLoss() # BCEWithLogitsLoss = sigmoid built-in
+
+# Create an optimizer
+optimizer = torch.optim.SGD(params=model_0.parameters(), 
+                            lr=0.1)
+```
+
+
+```python
+# Calculate accuracy (a classification metric)
+def accuracy_fn(y_true, y_pred):
+    correct = torch.eq(y_true, y_pred).sum().item() # torch.eq() calculates where two tensors are equal
+    acc = (correct / len(y_pred)) * 100 
+    return acc
+```
+
+
+```python
+# Lets build our training loop
+
+# number of epochs we want to run our training loop for
+epochs = 100
+
+# transfer our data onto the target device
+X_train, y_train = X_train.to(device), y_train.to(device)
+X_test, y_test = X_test.to(device), y_test.to(device)
+
+# set up the training loop
+for epoch in range(epochs):
+    model_0.train()
+    
+    # forward pass
+    y_logits = model_0(X_train).squeeze() # What is the purpose of squeeze?
+    y_pred = torch.round(torch.sigmoid(y_logits))
+    
+    # calculate the loss/accuracy
+    loss = loss_fn(y_logits, y_train)
+    acc = accuracy_fn(y_true=y_train, y_pred=y_pred)
+    
+    # optimizer zero grad
+    optimizer.zero_grad() # Why do we zero grad?
+    
+    # calculate the loss
+    loss.backward()
+    
+    # optimizer
+    optimizer.step()
+    
+    #  
+    model_0.eval()
+    with torch.inference_mode():
+        # 1. Forward pass
+        test_logits = model_0(X_test).squeeze() 
+        test_pred = torch.round(torch.sigmoid(test_logits))
+        # 2. Caculate loss/accuracy
+        test_loss = loss_fn(test_logits,
+                            y_test)
+        test_acc = accuracy_fn(y_true=y_test,
+                               y_pred=test_pred)
+
+    # Print out what's happening every 10 epochs
+    if epoch % 10 == 0:
+        print(f"Epoch: {epoch} | Loss: {loss:.5f}, Accuracy: {acc:.2f}% | Test loss: {test_loss:.5f}, Test acc: {test_acc:.2f}%")
+    
+```
+
+    Epoch: 0 | Loss: 18.25607, Accuracy: 0.78% | Test loss: -7712.78711, Test acc: 62.23%
+    Epoch: 10 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    Epoch: 20 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    Epoch: 30 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    Epoch: 40 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    Epoch: 50 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    Epoch: 60 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    Epoch: 70 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    Epoch: 80 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    Epoch: 90 | Loss: nan, Accuracy: 0.00% | Test loss: nan, Test acc: 0.00%
+    
+
 ## Feature Engineering
 
 Some of the features we think we can engineer from our data preprocessing steps include the following:
@@ -3956,25 +4963,71 @@ Some of the features we think we can engineer from our data preprocessing steps 
 
 
 ```python
+# Lets cluster our fighters - My assumption based on domain knowledge is we have 
+# different style of fighters, which might help us predict the winner
+
+from sklearn.cluster import KMeans
+
+# split the features and target variable
+y = dataframe['winner']
+X = dataframe.drop('winner', axis=1)
+
+# create a list of number of clusters to try
+estimators = [
+    ('K_means_cluster_3', KMeans(n_clusters=3)),
+    ('K_means_cluster_5', KMeans(n_clusters=5)),
+    ('K_means_cluster_7', KMeans(n_clusters=7)),
+]
+
+# create a plot 
+fig = plt.figure(figsize=(10,8))
+titles = ['3 Clusters', '5 Clusters', '7 Clusters']
+for idx, ((name, est), title) in enumerate(zip(estimators, titles)):
+    ax = fig.add_subplot(2, 2, idx + 1, projection='3d')
+    est.fit(X)
+    labels = est.labels_
+    
+
+```
+
+    Index(['fighter_a_height', 'fighter_b_height', 'fighter_a_weight',
+           'fighter_b_weight', 'fighter_a_reach', 'fighter_b_reach',
+           'fighter_a_stance', 'fighter_b_stance', 'fighter_a_SLpM',
+           'fighter_b_SLpM', 'fighter_a_str_acc', 'fighter_b_str_acc',
+           'fighter_a_SApM', 'fighter_b_SApM', 'fighter_a_str_def',
+           'fighter_b_str_def', 'fighter_a_TD_avg', 'fighter_b_TD_avg',
+           'fighter_a_TD_acc', 'fighter_b_TD_acc', 'fighter_a_TD_def',
+           'fighter_b_TD_def', 'fighter_a_sub_avg', 'fighter_b_sub_avg',
+           'fighter_a_age', 'fighter_b_age'],
+          dtype='object')
+    
+
+
+    
+![png](output_39_1.png)
+    
+
+
+
+```python
 # Lets look at how important each column is to the winner column
+corr = dataframe.corr()
 
-# Select the column to compare with
-target_column = 'target_column'
-
-# Calculate the correlation of all columns with the target column
-correlation_with_target = df.corrwith(df[target_column])
-
-# Plot the correlation
-plt.figure(figsize=(10, 8))
-sns.heatmap(correlation_with_target.to_frame(), annot=True, cmap='coolwarm', fmt=".2f")
-plt.title(f'Correlation with {target_column}')
-plt.show()
+# plot the heatmap
+sns.heatmap(corr, cmap="Blues")
 
 ```
 
 
+
+
+    <AxesSubplot:>
+
+
+
+
     
-![png](output_29_0.png)
+![png](output_40_1.png)
     
 
 
@@ -6910,7 +7963,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_2.png)
+![png](output_50_2.png)
     
 
 
@@ -6920,7 +7973,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_4.png)
+![png](output_50_4.png)
     
 
 
@@ -6930,7 +7983,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_6.png)
+![png](output_50_6.png)
     
 
 
@@ -6940,7 +7993,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_8.png)
+![png](output_50_8.png)
     
 
 
@@ -6950,7 +8003,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_10.png)
+![png](output_50_10.png)
     
 
 
@@ -6960,7 +8013,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_12.png)
+![png](output_50_12.png)
     
 
 
@@ -6970,7 +8023,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_14.png)
+![png](output_50_14.png)
     
 
 
@@ -6980,7 +8033,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_16.png)
+![png](output_50_16.png)
     
 
 
@@ -6990,7 +8043,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_18.png)
+![png](output_50_18.png)
     
 
 
@@ -7000,7 +8053,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_20.png)
+![png](output_50_20.png)
     
 
 
@@ -7010,7 +8063,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_22.png)
+![png](output_50_22.png)
     
 
 
@@ -7020,7 +8073,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_24.png)
+![png](output_50_24.png)
     
 
 
@@ -7030,7 +8083,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_26.png)
+![png](output_50_26.png)
     
 
 
@@ -7040,7 +8093,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_28.png)
+![png](output_50_28.png)
     
 
 
@@ -7050,7 +8103,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_30.png)
+![png](output_50_30.png)
     
 
 
@@ -7060,7 +8113,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_32.png)
+![png](output_50_32.png)
     
 
 
@@ -7070,7 +8123,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_34.png)
+![png](output_50_34.png)
     
 
 
@@ -7080,7 +8133,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_36.png)
+![png](output_50_36.png)
     
 
 
@@ -7090,7 +8143,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_38.png)
+![png](output_50_38.png)
     
 
 
@@ -7100,7 +8153,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_40.png)
+![png](output_50_40.png)
     
 
 
@@ -7110,7 +8163,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_42.png)
+![png](output_50_42.png)
     
 
 
@@ -7120,7 +8173,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_44.png)
+![png](output_50_44.png)
     
 
 
@@ -7130,7 +8183,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_46.png)
+![png](output_50_46.png)
     
 
 
@@ -7140,7 +8193,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_48.png)
+![png](output_50_48.png)
     
 
 
@@ -7150,7 +8203,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_50.png)
+![png](output_50_50.png)
     
 
 
@@ -7160,7 +8213,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_52.png)
+![png](output_50_52.png)
     
 
 
@@ -7170,7 +8223,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_54.png)
+![png](output_50_54.png)
     
 
 
@@ -7180,7 +8233,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_56.png)
+![png](output_50_56.png)
     
 
 
@@ -7190,7 +8243,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_58.png)
+![png](output_50_58.png)
     
 
 
@@ -7200,7 +8253,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_60.png)
+![png](output_50_60.png)
     
 
 
@@ -7210,7 +8263,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_62.png)
+![png](output_50_62.png)
     
 
 
@@ -7220,7 +8273,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_64.png)
+![png](output_50_64.png)
     
 
 
@@ -7230,7 +8283,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_66.png)
+![png](output_50_66.png)
     
 
 
@@ -7240,7 +8293,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_68.png)
+![png](output_50_68.png)
     
 
 
@@ -7250,7 +8303,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_70.png)
+![png](output_50_70.png)
     
 
 
@@ -7260,7 +8313,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_72.png)
+![png](output_50_72.png)
     
 
 
@@ -7270,7 +8323,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_74.png)
+![png](output_50_74.png)
     
 
 
@@ -7280,7 +8333,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_76.png)
+![png](output_50_76.png)
     
 
 
@@ -7290,7 +8343,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_78.png)
+![png](output_50_78.png)
     
 
 
@@ -7300,7 +8353,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_80.png)
+![png](output_50_80.png)
     
 
 
@@ -7310,7 +8363,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_82.png)
+![png](output_50_82.png)
     
 
 
@@ -7320,7 +8373,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_84.png)
+![png](output_50_84.png)
     
 
 
@@ -7330,7 +8383,7 @@ for i in numerical_columns:
 
 
     
-![png](output_39_86.png)
+![png](output_50_86.png)
     
 
 
