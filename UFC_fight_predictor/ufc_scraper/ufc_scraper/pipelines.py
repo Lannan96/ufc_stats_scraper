@@ -15,9 +15,9 @@ class ufc_fighter_scraper_pipeline:
     def __init__(self):
         self.conn = mysql.connector.connect(
             host='localhost',
-            user='root',
-            passwd='Ashtead96',
-            database='ufc_database')
+            user='username',
+            passwd='password',
+            database='database_name')
         
         # create a cursor object using the cursor() method
         self.cursor = self.conn.cursor()
