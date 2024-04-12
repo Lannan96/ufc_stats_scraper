@@ -6,9 +6,9 @@ import mysql.connector
 
 db = mysql.connector.connect(
     host='localhost',
-    user='root',
-    passwd='Ashtead96',
-    database='ufc_database'
+    user='username',
+    passwd='password',
+    database='database_name'
 )
 
 mycursor = db.cursor()
